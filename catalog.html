@@ -10,13 +10,27 @@
         <a>
           <img src="img/logo-technomart.svg" width="100" height="50" alt="Техномарт">
         </a>
-        <div>
-          <button type="button">Поиск</button>
-          <input type="text" placeholder="Поиск"/>
-        </div>
         <ul>
-          <li><a href="#">Закладки</a>: 0</li>
-          <li><a href="#">Корзина</a>: 0</li>
+          <li>
+            <form action="#" method="get">
+              <button type="submit"  aria-label="Поиск">
+                <img src="img/icon-search.svg" width="17" height="17" alt="Поиск"/>
+              </button>
+              <input name="q"  type="text" placeholder="Поиск"/>
+            </form>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icon-bookmark.svg" width="14" height="16">
+              Закладки: 0
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icon-cart.svg" width="15" height="15">
+              Корзина: 0
+            </a>
+          </li>
           <li><a href="#">Оформить заказ</a></li>
         </ul>
       </section>
@@ -25,7 +39,7 @@
       </h1>
 
       <section>
-        <h2>Адресс</h2>
+        <h2 class="visually-hidden">Адресс</h2>
         <div>
           +7 (812) 555-05-55
         </div>
@@ -33,10 +47,20 @@
       </section>
 
       <section>
-        <h2>Аккаунт</h2>
-        <a href="blank.html">Войти</a>
-        <a href="blank.html">Регистрация</a>
+        <h2 class="visually-hidden">Аккаунт</h2>
+        <ul>
+          <li>
+            <a href="blank.html">
+              <img src="img/icon-login.svg" alt="Войти">
+              Войти
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">Регистрация</a>
+          </li>
+        </ul>
       </section>
+
       <nav>
         <h2>Навигация</h2>
         <ul>
@@ -58,43 +82,126 @@
       </ul>
       <section>
         <h2>Перфораторы</h2>
-        <div>Фильтор:</div>
-        <div>
-          Сортитовка:
-          <span>По Цене</span>
-          <span>По Типу</span>
-          <span>По Функционалу</span>
-          <button type="button">UP</button>
-          <button type="button">DOWN</button>
-        </div>
-        <!-- Inventory -->
-        <ul>
-          <li>
-            <img src="https://via.placeholder.com/184x184" width="184" height="184">
-            <h3>Перфоратор BOSCH BFG 3000</h3>
-            <span>32500 Р.</span>
-            <a><span>25500 Р.</span></a>
-          </li>
-          <li>
-            <img src="https://via.placeholder.com/184x184" width="184" height="184">
-            <h3>Перфоратор BOSCH BFG 3000</h3>
-            <span>32500 Р.</span>
-            <a><span>25500 Р.</span></a>
-          </li>
-          <li>
-            <img src="https://via.placeholder.com/184x184" width="184" height="184">
-            <h3>Перфоратор BOSCH BFG 3000</h3>
-            <span>32500 Р.</span>
-            <a><span>25500 Р.</span></a>
-          </li>
-        </ul>
-        <!-- Paging -->
-        <ul>
-          <li>1</li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">Следующая</a></li>
-        </ul>
+
+        <section>
+          <h2>Фильтор:</h2>
+          <form>
+            <div>
+              <!-- TODO PRICE -->
+            </div>
+            <div>
+              <fieldset>
+                <legend>Производители:</legend>
+                <label>
+                  <input type="checkbox" name="madeBy" value="1">
+                  Bosh
+                </label>
+
+                <label>
+                  <input type="checkbox" name="madeBy" value="2">
+                  Интерскол
+                </label>
+
+                <label>
+                  <input type="checkbox" name="madeBy" value="3">
+                  Makita
+                </label>
+
+                <label>
+                  <input type="checkbox" name="madeBy" value="4">
+                  Dewalt
+                </label>
+
+                <label>
+                  <input type="checkbox" name="madeBy" value="5">
+                  Hitachi
+                </label>
+
+              </fieldset>
+            </div>
+            <div>
+              <fieldset>
+                <legend>Питание:</legend>
+                <label>
+                  <input
+                    type="radio"
+                    name="power"
+                    value="B"
+                    checked
+                  />
+                  <span>Акуммуляторное</span>
+                </label>
+
+                <label>
+                  <input
+                    type="radio"
+                    name="power"
+                    value="M"
+                  />
+                  <span>Сетевые</span>
+                </label>
+              </fieldset>
+            </div>
+            <fieldset>
+              <button type="submit">Показать</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <section>
+          <div>
+            <form action="#" method="get">
+              <fieldset>
+                <legend>Сортитовка:</legend>
+                <select name="sort">
+                  <option value="P">По Цене</option>
+                  <option value="T">По Типу</option>
+                  <option value="F">По Функционалу</option>
+                </select>
+                <button type="button">
+                  <img src="img/icon-triangle-up.svg" width="11" height="10">
+                </button>
+                <button type="button">
+                  <img src="img/icon-triangle-down.svg" width="11" height="10">
+                </button>
+              </fieldset>
+            </form>
+          </div>
+          <!-- Inventory -->
+          <section>
+            <h2 class="visually-hidden">Каталог</h2>
+
+            <article>
+              <img src="https://via.placeholder.com/184x184" width="184" height="184">
+              <h3>Перфоратор BOSCH BFG 3000</h3>
+              <span class="visually-hidden">In bookmarks</span>
+              <span>32500 Р.</span>
+              <span>25500 Р.</span>
+            </article>
+
+            <article>
+              <img src="https://via.placeholder.com/184x184" width="184" height="184">
+              <h3>Перфоратор BOSCH BFG 3000</h3>
+              <button type="button">
+                <img src="img/icon-cart.svg" width="15" height="15">
+                <span>Купить</span>
+              </button>
+              <button type="button">
+                <span>В заеладки</span>
+              </button>
+            </article>
+
+          </section>
+
+
+          <!-- Paging -->
+          <ul>
+            <li>1</li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">Следующая</a></li>
+          </ul>
+        </section>
       </section>
       <section>
         <h2>Пара слов о перфераторах</h2>
@@ -162,5 +269,21 @@
         </p>
       </section>
     </footer>
+
+    <!-- Popup Confirmation -->
+    <template>
+      <article>
+        <button type="button" aria-label="Закрыть">
+          <img src="img/icon-close.svg">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <img src="img/icon-mark.svg" width="66" height="66">
+        <span>Товар добавлен в корзину</span>
+        <div>
+          <button type="button">Оформить Заказ</button>
+          <button type="button">Продолжить Покупки</button>
+        </div>
+      </article>
+    </template>
   </body>
 </html>
