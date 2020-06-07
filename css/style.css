@@ -15,6 +15,16 @@
   --error: #BA2732;
 }
 
+html {
+
+}
+
+header, main, footer {
+  outline: 3px solid rgba(255, 0, 0, 0.4);
+  offset: -3px;
+  margin: 5px;
+}
+
 body {
   margin: 0;
   font-family: 'Cuprum', sans-serif;
@@ -47,4 +57,8 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.hidden {
+  display: none;
 }
