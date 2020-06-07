@@ -16,7 +16,7 @@
         <ul>
           <li>
             <form action="#" method="get">
-              <button type="submit"  aria-label="Поиск">
+              <button type="submit"  aria-label="Поиск" class="visually-hidden">
                 <img src="img/icon-search.svg" width="17" height="17" alt="Поиск"/>
               </button>
               <input name="q"  type="text" placeholder="Поиск"/>
@@ -24,21 +24,22 @@
           </li>
           <li>
             <a href="#">
-              <img src="img/icon-bookmark.svg" width="14" height="16">
+              <img src="img/icon-bookmark.svg" width="14" height="16" class="visually-hidden">
               Закладки: 0
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/icon-cart.svg" width="15" height="15">
+              <img src="img/icon-cart.svg" width="15" height="15" class="visually-hidden">
               Корзина: 0
             </a>
           </li>
           <li><a href="#">Оформить заказ</a></li>
         </ul>
       </section>
+
       <h1>
-        Интернет-магазин строительных материалов и инструментов для ремонта
+        Интернет-маназин стройительных матерьялов и инструментов вля ремонта
       </h1>
 
       <section>
@@ -46,7 +47,7 @@
         <div>
           +7 (812) 555-05-55
         </div>
-        <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </span>
+        <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
       </section>
 
       <section>
@@ -54,7 +55,7 @@
         <ul>
           <li>
             <a href="blank.html">
-              <img src="img/icon-login.svg" alt="Войти">
+              <img src="img/icon-login.svg" alt="Войти" class="visually-hidden">
               Войти
             </a>
           </li>
@@ -65,7 +66,7 @@
       </section>
 
       <nav>
-        <h2>Навигация</h2>
+        <h2 class="visually-hidden">Навигация</h2>
         <ul>
           <li><a href="blank.html">Главная</a></li>
           <li><a href="blank.html">Компания</a></li>
@@ -173,28 +174,36 @@
           <!-- Inventory -->
           <section>
             <h2 class="visually-hidden">Каталог</h2>
-
-            <article>
-              <img src="files/product001.png" width="184" height="184">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <span class="visually-hidden">In bookmarks</span>
-              <span>32500 Р.</span>
-              <span>25500 Р.</span>
-            </article>
-            <article>
-              <img src="files/product002.png" width="184" height="184">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <span class="visually-hidden">In bookmarks</span>
-              <span>32500 Р.</span>
-              <span>25500 Р.</span>
-            </article>
-            <article>
-              <img src="files/product003.png" width="184" height="184">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <span class="visually-hidden">In bookmarks</span>
-              <span>32500 Р.</span>
-              <span>25500 Р.</span>
-            </article>
+            <ul>
+              <li>
+                <img src="files/product001.png" width="184" height="164">
+                <h3>Перфоратор BOSCH</h3>
+                <b>BFG 9000</b><br>
+                <span>32500 Р.</span><br>
+                <a href="#"><span>25500 Р.</span></a>
+              </li>
+              <li>
+                <img src="files/product002.png" width="184" height="164">
+                <h3>Перфоратор BOSCH</h3><br>
+                <b>BFG 3000</b>
+                <span>32500 Р.</span><br>
+                <a><span>25500 Р.</span></a>
+              </li>
+              <li>
+                <img src="files/product003.png" width="184" height="164">
+                <h3>Перфоратор BOSCH</h3>
+                <b>BFG 6000</b><br>
+                <span>32500 Р.</span><br>
+                <a><span>25500 Р.</span></a>
+              </li>
+              <li>
+                <img src="files/product004.png" width="184" height="164">
+                <h3>Перфоратор BOSCH</h3>
+                <b>BFG 2000</b><br>
+                <span>32500 Р.</span><br>
+                <a><span>25500 Р.</span></a>
+              </li>
+            </ul>
 
      <!--       <article>
               <img src="https://via.placeholder.com/184x184" width="184" height="184">
@@ -252,7 +261,7 @@
       <section>
         <h2 class="visually-hidden">Адресс</h2>
         <p>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55
         </p>
       </section>
@@ -260,7 +269,7 @@
       <section>
         <h2 class="visually-hidden">Копирайт</h2>
         <p>
-          &copy;2010–2019 Компания «Техномарт» <br>
+          &copy;2010–2019 Компания "Техномарт"<br>
           Все права защищены
         </p>
       </section>
@@ -280,9 +289,9 @@
       </p>
 
       <section>
-        <h2>Разработчик</h2>
+        <h2 class="visually-hidden">Разработчик</h2>
         <p>
-          Разработано — <br>
+          Разработано
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </section>
