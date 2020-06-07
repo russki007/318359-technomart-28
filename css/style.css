@@ -1,4 +1,5 @@
 :root {
+  --color-black: #000;
   --color-red: #EE3643;
   --color-green: #63A63E;
   --color-grey: #3D546F;
@@ -15,6 +16,8 @@
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
+  --font-cuprum: "Cuprum", sans-serif;
+  --font-ptsans: "PT Sans", sans-serif;
 }
 
 /* OUTLINES START - DELETE */
@@ -37,20 +40,44 @@ html {
 }
 
 body {
-  font-family: 'Cuprum', sans-serif;
-  min-width: 950px;
-}
-
-body {
+  font-family: var(--font-ptsans);
+  min-width: 960px;
+  font-size: 13px;
+  font-height: 24px;
+  font-height: 24px;
+  font-weight: normal;
   min-height: 100%;
   display: grid;
   grid-template-rows: 320px auto 300px;
+  color: var(--color-black);
 }
 
 header {
   background-color: var(--color-background);
   height: 320px;
   display: flex;
+}
+
+.header-menu {
+  font-style: normal;
+  font-size: 18px;
+  font-height: 24px;
+  font-family: var(--font-cuprum);
+}
+
+.header-menu .menu-items {
+  list-style: none;
+}
+
+.header-navigation {
+  font-style: normal;
+  font-size: 18px;
+  font-height: 24px;
+  font-family: var(--font-cuprum);
+}
+
+.header-navigation .navigation-items {
+  list-style: none;
 }
 
 footer {
