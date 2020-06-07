@@ -1,34 +1,62 @@
 :root {
-  --colour-red: #EE3643;
-  --colour-green: #63A63E;
-  --colour-grey: #3D546F;
-  --colour-greylight: #C5C5C5;
-  --colour-background: #F1F5F7;
-  --colour-white: #FFF;
-  --colour-ylellow: #FFBF47;
-  --colour-blue: #3BBCE3;
-  --colour-lilac: #DC91D8;
-  --colour-greenlight: #8ED78F;
-  --colour-yellowlight: #FFD180;
+  --color-red: #EE3643;
+  --color-green: #63A63E;
+  --color-grey: #3D546F;
+  --color-greylight: #C5C5C5;
+  --color-greydark: #293449;
+  --color-greydark2: #32425C;
+  --color-background: #F1F5F7;
+  --color-white: #FFF;
+  --color-ylellow: #FFBF47;
+  --color-blue: #3BBCE3;
+  --color-lilac: #DC91D8;
+  --color-greenlight: #8ED78F;
+  --color-yellowlight: #FFD180;
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
 }
 
-html {
-
+/* OUTLINES START - DELETE */
+header, footer, footer section, nav, header section, header p, footer p {
+  outline: 3px dashed rgba(0, 255, 0, 0.4);
+  offset: -3px;
+  margin: 10px;
 }
 
-header, main, footer {
-  outline: 3px solid rgba(255, 0, 0, 0.4);
+main {
+  outline: 3px dashed rgba(255, 0, 0, 0.4);
   offset: -3px;
-  margin: 5px;
+  margin: 10px;
+}
+
+/* OUTLINES END - DELETE */
+
+html {
+  height: 100%;
 }
 
 body {
-  margin: 0;
   font-family: 'Cuprum', sans-serif;
   min-width: 950px;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 320px auto 300px;
+}
+
+header {
+  background-color: var(--color-background);
+  height: 320px;
+  display: flex;
+}
+
+footer {
+  display: flex;
+  background-color: var(--color-greydark2);
+  max-height: 300px;
 }
 
 a {
@@ -38,11 +66,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.main-header {
-  background-color: var(--colour-background);
-  height: 320px;
 }
 
 .visually-hidden {
