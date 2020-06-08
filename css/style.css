@@ -4,6 +4,7 @@
   --color-green: #63A63E;
   --color-grey: #3D546F;
   --color-greylight: #C5C5C5;
+  --color-grey2: #E5E5E5; /* Used for filter-button border */
   --color-greydark: #293449;
   --color-greydark2: #32425C;
   --color-background: #F1F5F7;
@@ -69,6 +70,12 @@ body {
   font-size: 18px;
   font-height: 24px;
   font-family: var(--font-cuprum);
+  background-color: var(--color-greydark);
+  color: var(--color-white);
+}
+
+.tools-white-text {
+  color: var(--color-white);
 }
 
 .header-tools-list {
@@ -139,6 +146,129 @@ body {
 
 }
 
+/* BREADCRUMBS */
+.breadcrumbs-list {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.breadcrumbs-list a {
+  color: var(--color-black);
+}
+
+.breadcrumbs-list a:hover,
+.breadcrumbs-list a:focus {
+  text-decoration: none;
+}
+
+.breadcrumbs-current {
+  color: var(--color-black);
+}
+
+/* MAIN */
+.main {
+
+}
+
+.main h2 {
+  font-size: 30px;
+  line-height: 30px;
+  font-family: var(--font-cuprum);
+}
+
+.main p {
+  ont-size: 13px;
+  line-height: 24px;
+}
+
+.banner {
+  background-color: #F2F6F8;
+  height: 89px;
+ }
+
+.banner-text {
+  text-transform: uppercase;
+}
+
+.courier-list {
+  list-style: none;
+  padding: 0;
+}
+
+.courier-list-item {
+  font-family: var(--font-cuprum);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* FILTER */
+.filter {
+
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 18px;
+}
+
+.filter label {
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.filter-button {
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  width: 220px;
+  height: 38px;
+  background: var(--color-white);
+  border: 1px solid var(--color-grey2);
+}
+
+.catalog {
+
+}
+
+.catalog-list {
+  list-style: none;
+  padding: 0;
+}
+
+.catalog-item {
+
+}
+
+.catalog-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+
+}
+
+.catalog-item-price {
+
+}
+
+.catalog-item-special {
+
+}
+
+
+
+/* FOOTER */
+
 .footer {
   display: flex;
   background-color: var(--color-greydark2);
@@ -208,6 +338,21 @@ footer .small-text-white {
 
 footer .contacts-button {
 
+}
+
+/* BUTTONS */
+.button {
+  text-align: center;
+  color: var(--color-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--color-red);
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: var(--font-cuprum);
+  width: 220px;
+  height: 37px;
 }
 
 a {
