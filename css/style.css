@@ -27,6 +27,12 @@ header, footer, footer section, nav, header section, header p, footer p {
   margin: 10px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 main {
   outline: 3px dashed rgba(255, 0, 0, 0.4);
   offset: -3px;
@@ -52,38 +58,156 @@ body {
   color: var(--color-black);
 }
 
-header {
+.header {
   background-color: var(--color-background);
   height: 320px;
   display: flex;
 }
 
-.header-menu {
+.header-tools {
   font-style: normal;
   font-size: 18px;
   font-height: 24px;
   font-family: var(--font-cuprum);
 }
 
-.header-menu .menu-items {
+.header-tools-list {
   list-style: none;
+  padding: 0;
 }
 
-.header-navigation {
+.header-tools-item {
+
+}
+
+.header-nav {
   font-style: normal;
   font-size: 18px;
   font-height: 24px;
   font-family: var(--font-cuprum);
 }
 
-.header-navigation .navigation-items {
+.header-nav-list {
   list-style: none;
+  padding: 0;
 }
 
-footer {
+.header-nav-item {
+
+}
+
+.header-pane {
+  font-family: var(--font-cuprum);
+}
+
+.header-text {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 23px;
+  color: var(--color-red);
+}
+
+.phone-box {
+  border: solid 2px var(--color-white);
+}
+
+.header-text-small {
+  font-family: Cuprum;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.phone-text {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 30px;
+  color: var(--color-red);
+}
+
+.account-nav {
+  font-family: Cuprum;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.account-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.account-nav-item {
+
+}
+
+.footer {
   display: flex;
   background-color: var(--color-greydark2);
   max-height: 300px;
+  font-family: var(--font-cuprum);
+}
+
+.footer-pane-upper {
+
+}
+
+.footer-pane-lower {
+  background-color: var(--color-greydark);
+}
+
+.footer-nav {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-nav-list {
+  padding: 0;
+  list-style: none;
+  color: var(--color-background);
+}
+
+.footer-nav-item {
+}
+
+.footer-nav a, .footer-nav a:hover, .footer-nav a:focus  {
+  color: var(--color-white);
+}
+
+footer .link-text-yellow {
+  color: var(--color-ylellow);
+}
+
+footer .small-text-white {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-white);
+}
+
+.address-text {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-white);
+}
+
+.copyright {
+
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  color: var(--color-white);
+}
+
+.contacts-list-item {
+  text-align: center;
+}
+
+.contacts-list-item img {
+  border-radius: 50%;
+}
+
+footer .contacts-button {
+
 }
 
 a {
