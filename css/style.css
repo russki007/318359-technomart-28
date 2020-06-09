@@ -16,6 +16,7 @@
   --color-lilac: #DC91D8;
   --color-greenlight: #8ED78F;
   --color-yellowlight: #FFD180;
+  --color-banner: ##F9F5F0;
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
@@ -186,12 +187,15 @@ body {
 }
 
 .banner {
-  background-color: #F2F6F8;
+  background-color: #F9F5F0; <!-- DODO: Ask Alex about backgound colors or images -->
   height: 89px;
  }
 
 .banner-text {
   text-transform: uppercase;
+  color: #32425C;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .courier-list {
