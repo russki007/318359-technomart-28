@@ -11,6 +11,7 @@
 
     <header class="header">
       <section class="header-tools">
+        <h2 class="visually-hidden">Инструменты</h2>
         <a>
           <img src="img/logo-technomart.svg" width="100" height="50" alt="Техномарт">
         </a>
@@ -20,22 +21,24 @@
               <button type="submit" aria-label="Поиск" class="visually-hidden">
                 <img src="img/icon-search.svg" width="17" height="17" alt="Поиск"/>
               </button>
-              <input name="q" type="text" placeholder="Поиск"/>
+              <input name="search" type="text" placeholder="Поиск"/>
             </form>
           </li>
           <li class="header-tools-item">
             <a class="tools-white-text" href="#">
-              <img src="img/icon-bookmark.svg" width="14" height="16" class="visually-hidden">
+              <img src="img/icon-bookmark.svg" width="14" height="16" class="visually-hidden" alt="Закладки">
               Закладки: 0
             </a>
           </li>
           <li class="header-tools-item">
             <a class="tools-white-text" href="#">
-              <img src="img/icon-cart.svg" width="15" height="15" class="visually-hidden">
+              <img src="img/icon-cart.svg" width="15" height="15" class="visually-hidden" alt="Корзина">
               Корзина: 0
             </a>
           </li>
-          <li class="header-tools-item"><a class="tools-white-text" href="#">Оформить заказ</a></li>
+          <li class="header-tools-item">
+            <a class="tools-white-text" href="#">Оформить заказ</a>
+          </li>
         </ul>
       </section>
 
@@ -177,7 +180,7 @@
             <h2 class="visually-hidden">Каталог</h2>
             <ul class="catalog-list">
               <li class="catalog-item">
-                <img src="files/product001.png" width="184" height="164"><br>
+                <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000"><br>
                 <div class="title">Перфоратор BOSCH BFG 9000</div>
                 <div class="price">32500 Р.</div>
                 <div>
@@ -185,7 +188,7 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <img src="files/product002.png" width="184" height="164">
+                <img src="img/product002.png" width="184" height="164" alt=" BOSCH BFG 3000">
                 <div class="title">Перфоратор BOSCH BFG 3000</div>
                 <div class="price">32500 Р.</div>
                 <div>
@@ -212,6 +215,7 @@
 
 
           <!-- Paging -->
+          <!-- Option 1. Conider using display: flex and have a look at justify-content-->
           <ul class="pagination-list">
             <li class="current">1</li>
             <li><a href="#">2</a></li>
@@ -239,20 +243,19 @@
           <img src="img/logo-technomart.svg" width="137" height="23" alt="Техномарт">
         </a>
         <section class="footer-nav">
+          <h2 class="visually-hidden">Навигация</h2>
           <ul class="footer-nav-list">
-            <div>
-              <li class="footer-nav-item"><a class="text-white" href="#">Компания</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="#">Новости</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="catalog.html">Каталог</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="#">Доставка</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="#">Контакты</a></li>
-            </div>
-            <div>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Материалы</a></li>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Техника</a></li>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Инструмент</a></li>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Спецпредложения</a></li>
-            </div>
+            <li class="footer-nav-item"><a class="text-white" href="#">Компания</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="#">Новости</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="catalog.html">Каталог</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="#">Доставка</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Материалы</a></li>
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Техника</a></li>
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Инструмент</a></li>
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Спецпредложения</a></li>
           </ul>
         </section>
 
@@ -279,19 +282,19 @@
             <li class="contacts-list-item">
               <span class="visually-hidden">Вконтакте</span>
               <a class="contacts-button" href="#">
-                <img src="img/icon-vk.svg" width="26" height="15">
+                <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
               </a>
             </li>
             <li class="contacts-list-item">
               <span class="visually-hidden">Фэйсбук</span>
               <a class="contacts-button" href="#">
-                <img src="img/icon-fb.svg" width="12" height="22">
+                <img src="img/icon-fb.svg" width="12" height="22" alt="Фэйсбук">
               </a>
             </li>
             <li class="contacts-list-item">
               <span class="visually-hidden">Инстаграм</span>
               <a class="contacts-button" href="#">
-                <img src="img/icon-insta.svg" width="21" height="21">
+                <img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
               </a>
             </li>
           </ul>
@@ -313,10 +316,10 @@
     </footer>
 
     <!-- CONFIRMATION POPUP -->
-    <template>
-      <article>
+    <div class="hidden">
+      <div>
         <button type="button" aria-label="Закрыть">
-          <img src="img/icon-close.svg">
+          <img src="img/icon-close.svg" alt="Закрыть">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <img src="img/icon-mark.svg" width="66" height="66">
@@ -325,7 +328,7 @@
           <button type="button">Оформить Заказ</button>
           <button type="button">Продолжить Покупки</button>
         </div>
-      </article>
-    </template>
+      </div>
+    </div>
   </body>
 </html>

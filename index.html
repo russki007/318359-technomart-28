@@ -14,6 +14,7 @@
 
     <header class="header">
       <section class="header-tools">
+        <h2 class="visually-hidden">Инструменты</h2>
         <a>
           <img src="img/logo-technomart.svg" width="100" height="50" alt="Техномарт">
         </a>
@@ -23,22 +24,24 @@
               <button type="submit" aria-label="Поиск" class="visually-hidden">
                 <img src="img/icon-search.svg" width="17" height="17" alt="Поиск"/>
               </button>
-              <input name="q" type="text" placeholder="Поиск"/>
+              <input name="search" type="text" placeholder="Поиск"/>
             </form>
           </li>
           <li class="header-tools-item">
             <a class="tools-white-text" href="#">
-              <img src="img/icon-bookmark.svg" width="14" height="16" class="visually-hidden">
+              <img src="img/icon-bookmark.svg" width="14" height="16" class="visually-hidden" alt="Закладки">
               Закладки: 0
             </a>
           </li>
           <li class="header-tools-item">
             <a class="tools-white-text" href="#">
-              <img src="img/icon-cart.svg" width="15" height="15" class="visually-hidden">
+              <img src="img/icon-cart.svg" width="15" height="15" class="visually-hidden" alt="Корзина">
               Корзина: 0
             </a>
           </li>
-          <li class="header-tools-item"><a class="tools-white-text" href="#">Оформить заказ</a></li>
+          <li class="header-tools-item">
+            <a class="tools-white-text" href="#">Оформить заказ</a>
+          </li>
         </ul>
       </section>
 
@@ -114,7 +117,7 @@
         </div>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <img src="files/product001.png" width="184" height="164">
+            <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000">
             <div class="title">Перфоратор BOSCH BFG 9000</div>
             <div class="price">32500 Р.</div>
             <div>
@@ -123,7 +126,7 @@
           </li>
 
           <li class="catalog-item">
-            <img src="files/product002.png" width="184" height="164">
+            <img src="img/product002.png" width="184" height="164" alt="BOSCH BFG 9000">
             <div class="title">Перфоратор BOSCH BFG 9000</div>
             <div class="price">32500 Р.</div>
             <div>
@@ -132,7 +135,7 @@
           </li>
 
           <li class="catalog-item">
-            <img src="files/product003.png" width="184" height="164">
+            <img src="img/product003.png" width="184" height="164" alt="BOSCH BFG 9000">
             <div class="title">Перфоратор BOSCH BFG 9000</div>
             <div class="price">32500 Р.</div>
             <div>
@@ -148,30 +151,30 @@
           <h2 class="banner-text">Популярные Производители:</h2>
           <button type="button" class="button-red">Все производители</button>
         </div>
-        <ul>
+        <ul class="makers-list">
           <li>
-            <img src="files/bosch.png" width="134" height="45">
+            <img src="img/bosch.svg" width="134" height="45" alt="Bosh">
           </li>
           <li>
-            <img src="files/makita.png" width="131" height="48">
+            <img src="img/makita.svg" width="131" height="48" alt="Makita">
           </li>
           <li>
-            <img src="files/dewalt.png" width="154" height="52">
+            <img src="img/dewalt.svg" width="154" height="52" alt="DeWalt">
           </li>
           <li>
-            <img src="files/interskol.png" width="208" height="96">
+            <img src="img/interskol.svg" width="208" height="96" alt="Интерскол">
           </li>
           <li>
-            <img src="files/hitachi.png" width="177" height="39">
+            <img src="img/hitachi.svg" width="177" height="39" alt="Hitachi">
           </li>
           <li>
-            <img src="files/lg.png" width="129" height="81">
+            <img src="img/lg.svg" width="129" height="81" alt="LG">
           </li>
           <li>
-            <img src="files/aeg.svg" width="151" height="96">
+            <img src="img/aeg.svg" width="151" height="96" alt="AEG">
           </li>
           <li>
-            <img src="files/metabo.png" width="212" height="77">
+            <img src="img/metabo.svg" width="212" height="77" alt="Matabo">
           </li>
         </ul>
       </section>
@@ -235,20 +238,19 @@
           <img src="img/logo-technomart.svg" width="137" height="23" alt="Техномарт">
         </a>
         <section class="footer-nav">
+          <h2 class="visually-hidden">Навигация</h2>
           <ul class="footer-nav-list">
-            <div>
-              <li class="footer-nav-item"><a class="text-white" href="#">Компания</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="#">Новости</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="catalog.html">Каталог</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="#">Доставка</a></li>
-              <li class="footer-nav-item"><a class="text-white" href="#">Контакты</a></li>
-            </div>
-            <div>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Материалы</a></li>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Техника</a></li>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Инструмент</a></li>
-              <li class="footer-nav-item"><a class="link-text-yellow" href="#">Спецпредложения</a></li>
-            </div>
+            <li class="footer-nav-item"><a class="text-white" href="#">Компания</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="#">Новости</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="catalog.html">Каталог</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="#">Доставка</a></li>
+            <li class="footer-nav-item"><a class="text-white" href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Материалы</a></li>
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Техника</a></li>
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Инструмент</a></li>
+            <li class="footer-nav-item"><a class="link-text-yellow" href="#">Спецпредложения</a></li>
           </ul>
         </section>
 
@@ -275,19 +277,19 @@
             <li class="contacts-list-item">
               <span class="visually-hidden">Вконтакте</span>
               <a class="contacts-button" href="#">
-                <img src="img/icon-vk.svg" width="26" height="15">
+                <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
               </a>
             </li>
             <li class="contacts-list-item">
               <span class="visually-hidden">Фэйсбук</span>
               <a class="contacts-button" href="#">
-                <img src="img/icon-fb.svg" width="12" height="22">
+                <img src="img/icon-fb.svg" width="12" height="22" alt="Фэйсбук">
               </a>
             </li>
             <li class="contacts-list-item">
               <span class="visually-hidden">Инстаграм</span>
               <a class="contacts-button" href="#">
-                <img src="img/icon-insta.svg" width="21" height="21">
+                <img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
               </a>
             </li>
           </ul>
@@ -310,21 +312,21 @@
 
     <!-- MAP POPUP -->
     <div class="hidden">
-      <article>
+      <div>
         <img src="img/map-popup.png" width="983" height="488" alt="Карта">
         <button type="button" aria-label="Закрыть">
-          <img src="img/icon-close.svg">
+          <img src="img/icon-close.svg" alt="Закрыть">
           <span class="visually-hidden">Закрыть</span>
         </button>
-      </article>
+      </div>
     </div>
 
     <!-- MESSAGE POPUP -->
-    <data class="hidden">
-      <article>
+    <div class="hidden">
+      <div>
         <img src="img/map-popup.png" width="983" height="488" alt="Карта">
         <button type="button" aria-label="Закрыть">
-          <img src="img/icon-close.svg">
+          <img src="img/icon-close.svg" alt="Закрыть">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <form action="#" method="post" enctype="multipart/form-data">
@@ -347,7 +349,7 @@
             <button type="submit">Оформить Заказ</button>
           </fieldset>
         </form>
-      </article>
-    </data>
+      </div>
+    </div>
   </body>
 </html>
