@@ -25,10 +25,9 @@
 }
 
 /* OUTLINES START - DELETE */
-main div, header, footer, footer section, nav, header section, header p, footer p {
+footer, footer section, header section, header p, footer p {
   outline: 3px dashed rgba(0, 255, 0, 0.4);
-  offset: -3px;
-  margin: 10px;
+  outline-offset: -3px;
 }
 
 *,
@@ -40,7 +39,6 @@ main div, header, footer, footer section, nav, header section, header p, footer 
 main {
   outline: 3px dashed rgba(255, 0, 0, 0.4);
   offset: -3px;
-  margin: 10px;
 }
 
 /* OUTLINES END - DELETE */
@@ -50,22 +48,35 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
   font-family: var(--font-ptsans);
   min-width: 960px;
   font-size: 13px;
-  font-height: 24px;
-  font-height: 24px;
   min-height: 100%;
-  display: grid;
-  grid-template-rows: 320px auto 300px;
   color: var(--color-black);
+}
+
+.header-logo {
+  display: inline-block;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
 }
 
 .header {
   background-color: var(--color-background);
   min-height: 320px;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .header-tools {
@@ -74,7 +85,7 @@ body {
   font-family: var(--font-cuprum);
   background-color: var(--color-greydark);
   color: var(--color-white);
-  display: flex;
+  width: 100%;
 }
 
 .tools-white-text {
@@ -84,12 +95,17 @@ body {
 .header-tools-list {
   list-style: none;
   padding: 0;
+
   display: flex;
+  justify-content: space-between;
+
+  outline: 3px dashed rgba(255, 0, 0, 0.4);
+  offset: -3px;
+
 }
 
 .header-tools-item a {
   display: block;
-  margin: 5px;
 }
 
 .header-nav {
@@ -97,17 +113,22 @@ body {
   font-size: 18px;
   font-height: 24px;
   font-family: var(--font-cuprum);
+  background-color: var(--color-greydark2);
+  box-shadow: inset 0px -5px 0px #293449;
  }
 
 .header-nav a {
   display: block;
   margin: 20px;
+  color: var(--color-white);
 }
 
 .header-nav-list {
   list-style: none;
   padding: 0;
+
   display: flex;
+  justify-content: space-between;
 }
 
 .header-nav-item {
@@ -117,6 +138,7 @@ body {
 .header-pane {
   font-family: var(--font-cuprum);
   display: flex;
+  justify-content: space-between;
 }
 
 .header-text {
@@ -124,6 +146,7 @@ body {
   font-style: italic;
   line-height: 23px;
   color: var(--color-red);
+  width: 197px;
 }
 
 .phone-box {
@@ -134,6 +157,7 @@ body {
   font-family: Cuprum;
   font-size: 14px;
   line-height: 24px;
+  color: var(--color-greydark2);
 }
 
 .phone-text {
@@ -141,10 +165,11 @@ body {
   font-weight: bold;
   line-height: 30px;
   color: var(--color-red);
+  text-align: center;
 }
 
 .account-nav {
-  font-family: Cuprum;
+  font-family: var(--font-cuprum);
   font-size: 21px;
   line-height: 21px;
 }
@@ -152,10 +177,171 @@ body {
 .account-nav-list {
   list-style: none;
   padding: 0;
+  display: flex;
 }
 
-.account-nav-item {
+.link-button {
+  display: inline-block;
+  background: var(--color-white);
+  min-height: 45px;
+  text-align: center;
+  vertical-align: middle;  /*TODO: Cannot align text vertically */
 
+  outline: dashed 1px red;
+  outline-offset: -1px;
+}
+
+.register-link {
+  width: 150px;
+
+}
+
+.login-link {
+  width: 121px;
+  margin-right: 5px;
+}
+
+
+.account-nav-item {
+}
+
+/* TODO: Verify with Alex
+   1. Used grid layout with 3 dynamic columns and gap 20. The width is forced by the
+   container of width: 940=300+300+300+20+20
+
+   2. Used absolute positioning for icons with fixed, custom botton/top values. Is there are
+   better solution.
+
+   3. By the buttons fall out? Can this be used for log in the headeer (margin)
+*/
+
+.promo-container {
+  margin: 0;
+  padding: 0;
+  height: 409px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.promo-item {
+  position: relative;
+}
+
+.promo-item .title {
+  margin-left: 23px;
+  margin-top: 20px;
+  font-family: var(--font-cuprum);
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-white);
+}
+
+.promo-item a {
+  display: inline-block;
+  width: 135px;
+  height: 38px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: var(--font-cuprum);
+  color: var(--color-white);
+  line-height: 38px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.30);
+  margin-left: 22px;
+  margin-top: 14px;
+}
+
+.promo-item a:hover {
+  /*background: var(--color-greylight);  /* TODO: Ask Alex, could not achieve this by setting background and opacity */
+  /*opacity: 0.3;*/
+  background: rgba(197, 197, 197, 0.30);  /* TODO: How to use vars in this notation */
+}
+
+.promo-item a:active {
+  background: rgba(169, 169, 169, 0.30);  /* TODO: How to use vars in this notation */
+}
+
+.bucket {
+  width: 44px;
+  height: 65px;
+  background-image: url("../img/icon-1-bucket.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 43px;
+  bottom: 27px;
+}
+
+.drill {
+  width: 75px;
+  height: 61px;
+  background-image: url("../img/icon-2-drill.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 31px;
+  bottom: 28px;
+}
+
+.tractor {
+  width: 78px;
+  height: 62px;
+  background-image: url("../img/icon-3-tractor.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 30px;
+  bottom: 31px;
+}
+
+.trolley {
+  width: 59px;
+  height: 72px;
+  background-image: url("../img/icon-4-trolley.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 45px;
+  bottom: 29px;
+}
+
+.van {
+  width: 78px;
+  height: 63px;
+  background-image: url("../img/icon-5-van.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 31px;
+  bottom: 28px;
+}
+
+.yellow {
+  background-color: var(--color-ylellow);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.lilac {
+  background-color: var(--color-lilac);
+}
+
+.green {
+  background-color: var(--color-greenlight);
+}
+
+
+.promo-slider {
+  /*grid-row-start: 2;
+  grid-row-end: -1;
+  grid-column-start: 1;
+  grid-column-end: 3;*/
+  grid-column: 1 / span 2;
+  grid-row: 2 / -1;
+}
+
+.slider-content {
+  margin: 0px;
 }
 
 /* BREADCRUMBS */
@@ -181,7 +367,7 @@ body {
 
 /* MAIN */
 .main {
-
+  margin-top: 59px;
 }
 
 .main h2 {
@@ -196,13 +382,13 @@ body {
 }
 
 .banner {
-  background-color: #F9F5F0; <!-- DODO: Ask Alex about backgound colors or images -->
+  background-color: #F9F5F0; /*TODO: Ask Alex about background colors or images */
   height: 89px;
  }
 
 .banner-text {
   text-transform: uppercase;
-  color: #32425C;
+  color: #32425C;  /* TODO: replace with var */
   font-size: 30px;
   line-height: 30px;
 }
@@ -316,10 +502,10 @@ body {
 
 .pagination-list li {
   width: 38px;
-  height: 38px;  <!-- TODO: Consider using lineheight: 2  or using lineheight 38px -->
+  height: 38px;   /* TODO: Consider using lineheight: 2  or using lineheight 38px */
   border: 1px solid var(--color-grey2);
   text-align: center;
-  vertical-align: middle; <!-- TODO: Cannot align, check with Alex -->
+  vertical-align: middle; /* TODO: Cannot align, check with Alex */
 }
 
 .pagination-list .current {
