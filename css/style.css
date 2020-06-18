@@ -1,6 +1,8 @@
 :root {
   --color-black: #000;
   --color-red: #EE3643;
+  --color-red2: #CA2C37; /* Used in by red buttons */
+  --color-red3: #BA2732; /* Used in by red buttons */
   --color-green: #63A63E;
   --color-grey: #3D546F;
   --color-greylight: #C5C5C5;
@@ -19,7 +21,7 @@
   --color-banner: #F9F5F0;
   --success: #5FBB2D;
   --warning: #FFBF47;
-  --error: #BA2732;
+  --error: var(--color-red3);
   --font-cuprum: "Cuprum", sans-serif;
   --font-ptsans: "PT Sans", sans-serif;
 }
@@ -59,6 +61,8 @@ body {
   color: var(--color-black);
 }
 
+/* TODO: */
+
 .header-logo {
   display: inline-block;
   outline: 5px solid rgba(255, 0, 0, 0.3);
@@ -95,13 +99,14 @@ body {
 .header-tools-list {
   list-style: none;
   padding: 0;
-
+  margin: 0;
   display: flex;
   justify-content: space-between;
+  min-height: 42px;
+  align-items: center;
 
   outline: 3px dashed rgba(255, 0, 0, 0.4);
   offset: -3px;
-
 }
 
 .header-tools-item a {
@@ -114,31 +119,48 @@ body {
   font-height: 24px;
   font-family: var(--font-cuprum);
   background-color: var(--color-greydark2);
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0px -5px 0px #293449; /* TODO: Change to vars */
  }
 
 .header-nav a {
   display: block;
-  margin: 20px;
   color: var(--color-white);
+  height: 100%;
+  padding: 16px 24px 20px 27px;
 }
+
+.header-nav a:hover {
+  background: #293449;
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.header-nav a:active {
+  background: #1D2739;
+  box-shadow: inset 0px -5px 0px #293449;
+  opacity: 0.5;
+}
+
 
 .header-nav-list {
   list-style: none;
   padding: 0;
-
+  margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  min-height: 60px;
 }
 
 .header-nav-item {
-
+  /*outline: 3px dashed rgba(0, 255, 0, 0.4);*/
+  /*outline-offset: -3px;*/
 }
 
 .header-pane {
   font-family: var(--font-cuprum);
   display: flex;
   justify-content: space-between;
+  margin-top: 41px;
+  margin-bottom: 40px;
 }
 
 .header-text {
@@ -147,10 +169,15 @@ body {
   line-height: 23px;
   color: var(--color-red);
   width: 197px;
+  margin-top: 0;
 }
 
+/* TODO: How archive vertical align of the phone and address? */
 .phone-box {
   border: solid 2px var(--color-white);
+  text-align: center;
+  width: 270px;
+  height: 45px;
 }
 
 .header-text-small {
@@ -166,30 +193,46 @@ body {
   line-height: 30px;
   color: var(--color-red);
   text-align: center;
+
+  outline: dashed 1px green;
+  outline-offset: -1px;
 }
 
 .account-nav {
-  font-family: var(--font-cuprum);
-  font-size: 21px;
-  line-height: 21px;
+
 }
 
 .account-nav-list {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
 }
 
 .link-button {
   display: inline-block;
   background: var(--color-white);
+  color: var(--color-black);
   min-height: 45px;
   text-align: center;
-  vertical-align: middle;  /*TODO: Cannot align text vertically */
+  line-height: 45px;
+  font-family: var(--font-cuprum);
+  font-size: 21px;
 
-  outline: dashed 1px red;
-  outline-offset: -1px;
+  /*outline: dashed 1px red;
+  outline-offset: -1px;*/
 }
+
+.link-button:hover {
+  color: var(--color-red);
+}
+
+.link-button:active {
+  color: var(--color-greylight);
+}
+
+
+
 
 .register-link {
   width: 150px;
@@ -198,9 +241,23 @@ body {
 
 .login-link {
   width: 121px;
-  margin-right: 5px;
+  margin-right: 10px;
+  position: relative;
 }
 
+.login-link::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 10px;
+
+  width: 20px;
+  height: 17px;
+
+  background-image: url("../img/icon-login.svg"); /* Check with Alex why differ in barbershop */
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
 .account-nav-item {
 }
@@ -218,7 +275,7 @@ body {
 .promo-container {
   margin: 0;
   padding: 0;
-  height: 409px;
+  min-height: 409px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -227,6 +284,8 @@ body {
 
 .promo-item {
   position: relative;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .promo-item .title {
@@ -338,13 +397,33 @@ body {
   grid-column-end: 3;*/
   grid-column: 1 / span 2;
   grid-row: 2 / -1;
+  position: relative;
 }
 
 .slider-content {
   margin: 0px;
 }
 
-/* BREADCRUMBS */
+.slider-button {
+  position: absolute;
+  top: 50%
+}
+
+.slider-button-back {
+  left: 10px;
+}
+
+.slider-button-next {
+  right: 10px;
+}
+
+.promo-slider .button-red {
+  position: absolute;
+  bottom: 27px;
+  left: 24px;
+}
+
+  /* BREADCRUMBS */
 .breadcrumbs-list {
   list-style: none;
   padding: 0;
@@ -384,7 +463,18 @@ body {
 .banner {
   background-color: #F9F5F0; /*TODO: Ask Alex about background colors or images */
   height: 89px;
+  margin-top: 59px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-left: 14px;
+  padding-right: 14px;
  }
+
+.banner a {
+  grid-column-start: -1;
+}
+
 
 .banner-text {
   text-transform: uppercase;
@@ -600,18 +690,27 @@ footer .contacts-button {
 
 /* BUTTONS */
 .button-red {
+  display: block;
   text-align: center;
   color: var(--color-white);
-  vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--color-red);
   border: none;
   font-size: 14px;
-  line-height: 18px;
   font-family: var(--font-cuprum);
-  width: 220px;
-  height: 37px;
+  width: 192px;
+  height: 38px;
+  line-height: 38px; /* TODO: Ask Alex, need to change line-heigt to center text vertically. OK? */
 }
+
+.button-red:hover {
+  background-color: var(--color-red2);
+}
+
+.button-red:active {
+  background-color: var(--color-red3);
+}
+
 
 a {
   text-decoration: none;
