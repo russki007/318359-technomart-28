@@ -4,7 +4,7 @@
   --color-red2: #CA2C37; /* Used in by red buttons */
   --color-red3: #BA2732; /* Used in by red buttons */
   --color-red4: #EE3643; /* Used in sort radio buttons */
-
+  --color-brown: #F7F3EC; /* Used in filter */
   --color-green: #63A63E;
   --color-grey: #3D546F;
   --color-greylight: #C5C5C5;
@@ -32,11 +32,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-main {
-  outline: 3px dashed rgba(255, 0, 0, 0.4);
-  offset: -3px;
 }
 
 html {
@@ -464,7 +459,9 @@ body {
 
 /* MAIN */
 .main {
-
+  margin: 5px;
+  outline: 3px dashed rgba(255, 0, 0, 0.4);
+  offset: -3px;
 }
 
 .main h2 {
@@ -516,66 +513,50 @@ body {
 
 
 .catalog-grid {
-
-  outline: dashed 3px red;
-  outline-offset: -3px;
-
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-columns:
-    100px
+  grid-template-rows:
+    38px
     1fr
-    30px;
+    min-content;
 
   grid-template-areas:
     "f s s s"
     "f c c c"
     "f p p p";
-
 }
 
-.sort {
-  /*grid-column: span 2 / -1;*/
+/* TODO: Ask Alex, had to this in the container to stretch the catalog grid */
 
-  grid-area: s;
-
-
-  outline: dashed 1px red;
-  outline-offset: -1px;
+.main .container {
+  display: grid;
+  grid-template-rows: min-content min-content 1fr;
 }
 
 .catalog {
   grid-area: c;
-
-  outline: dashed 1px red;
-  outline-offset: -1px;
 }
 
 .filter {
+  width: 220px;
   /*grid-column: 1;*/
   /*gird-row: span 1 / -1*/
-
-  width: 220px;
   grid-area: f;
-
-  outline: dashed 1px red;
-  outline-offset: -1px;
 }
 
 .pager {
   grid-area: p;
-
-  outline: dashed 1px red;
-  outline-offset: -1px;
 }
 
 /* SORTING */
 .sort {
   text-transform: uppercase;
-  width: 700px;
   display: grid;
   grid-template-columns: min-content 1fr;
+
+
+  grid-area: s;
+  /*grid-column: 2 / -1;*/
 }
 
 .sort h2 {
@@ -615,22 +596,50 @@ body {
 }
 
 /* FILTER */
+.filter h2 {
+  font-family: var(--font-ptsans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  width: 220px;
+  height: 38px;
+  background-color: var(--color-brown);
+  padding-left: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 0 5px;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+}
 
 .filter legend {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .filter ul {
   list-style: none;
   line-height: 18px;
+  padding: 0;
+  margin: 0;
 }
 
 .filter label {
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
+}
+
+.filter li {
+  margin-bottom:20px;
 }
 
 .filter-button {
@@ -648,28 +657,38 @@ body {
 /* CATALOG */
 
 .catalog {
-
 }
 
 .catalog-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+
+  /*
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 20px 0 70px;
-  gap: 20px;
+  column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 18px;
+  */
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-item {
   border: solid 1px var(--color-grey2);
-  height: 318px;
+  min-height: 318px;
+  width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  margin-bottom: 18px;
 }
 
-.catalog-item div {
+.spread {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalog-item .title {
