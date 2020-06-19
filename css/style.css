@@ -3,6 +3,8 @@
   --color-red: #EE3643;
   --color-red2: #CA2C37; /* Used in by red buttons */
   --color-red3: #BA2732; /* Used in by red buttons */
+  --color-red4: #EE3643; /* Used in sort radio buttons */
+
   --color-green: #63A63E;
   --color-grey: #3D546F;
   --color-greylight: #C5C5C5;
@@ -423,6 +425,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   display: flex;
+  justify-content: flex-start;
 }
 
 .breadcrumbs-item {
@@ -446,7 +449,7 @@ body {
   margin-left: 17px;
 }
 
-.breadcrumbs-item.current::after{
+.breadcrumbs-item.current::after {
   display: none;
 }
 
@@ -510,9 +513,52 @@ body {
   line-height: 24px;
 }
 
+/* SORTING */
+.sort {
+  text-transform: uppercase;
+  width: 700px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.sort h2 {
+  font-family: var(--font-ptsans);
+  font-size: 13px;
+  line-height: 18px;
+  margin-left: 19px;
+  width: 240px;
+  font-weight: normal;
+}
+
+.sort div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sort label {
+  cursor: pointer;
+}
+
+.sort-input-radio:checked + label {
+  color: var(--color-red4);
+  display: block;
+}
+
+.sort-input-radio:not(:checked) + label {
+  border-bottom: dashed 1px var(--color-red4);
+}
+
+.order-input-radio:not(:checked) + label path {
+  fill: var(--color-greylight);
+}
+
+.order-input-radio:checked + label path {
+  fill: var(--color-red4);
+}
+
 /* FILTER */
 .filter {
-
 }
 
 .filter legend {
