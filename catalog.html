@@ -91,149 +91,156 @@
     </header>
 
     <main class="main">
-      <ul class="breadcrumbs-list">
-        <li><a href="#">Дом</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li class="breadcrumbs-current">Перфораторы</li>
-      </ul>
-      <section>
-        <div class="banner">
-          <h2 class="banner-text">Перфораторы</h2>
-        </div>
-
-        <section class="filter">
-          <h2>Фильтор:</h2>
-          <form>
-            <div>
-              <!-- TODO PRICE -->
-            </div>
-            <div>
-              <fieldset>
-                <legend>Производители:</legend>
-                <label>
-                  <input type="checkbox" name="madeBy" value="1">
-                  Bosh
-                </label>
-
-                <label>
-                  <input type="checkbox" name="madeBy" value="2">
-                  Интерскол
-                </label>
-
-                <label>
-                  <input type="checkbox" name="madeBy" value="3">
-                  Makita
-                </label>
-
-                <label>
-                  <input type="checkbox" name="madeBy" value="4">
-                  Dewalt
-                </label>
-
-                <label>
-                  <input type="checkbox" name="madeBy" value="5">
-                  Hitachi
-                </label>
-
-              </fieldset>
-            </div>
-            <div>
-              <fieldset>
-                <legend>Питание:</legend>
-                <label>
-                  <input
-                    type="radio"
-                    name="power"
-                    value="B"
-                    checked
-                  />
-                  <span>Акуммуляторное</span>
-                </label>
-
-                <label>
-                  <input
-                    type="radio"
-                    name="power"
-                    value="M"
-                  />
-                  <span>Сетевые</span>
-                </label>
-              </fieldset>
-            </div>
-            <fieldset>
-              <button class="filter-button" type="submit">Показать</button>
-            </fieldset>
-          </form>
-        </section>
-
+      <div class="container">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-item">
+            <a href="index.html">
+              <img src="img/icon-home.svg" width="15" height="12" alt="Домой">
+            </a></li>
+          <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
+          <li class="breadcrumbs-item"><a href="#">Инструмент</a></li>
+          <li class="breadcrumbs-item current">Перфораторы</li>
+        </ul>
         <section>
-          <div>
-            <form action="#" method="get">
-              <fieldset>
-                <legend>Сортитовка:</legend>
-                <select name="sort">
-                  <option value="P">По Цене</option>
-                  <option value="T">По Типу</option>
-                  <option value="F">По Функционалу</option>
-                </select>
-                <button type="button">
-                  <img src="img/icon-triangle-up.svg" width="11" height="10">
-                </button>
-                <button type="button">
-                  <img src="img/icon-triangle-down.svg" width="11" height="10">
-                </button>
-              </fieldset>
-            </form>
+          <div class="banner grey">
+            <h2 class="banner-text">Перфораторы</h2>
           </div>
 
-          <section class="catalog">
-            <h2 class="visually-hidden">Каталог</h2>
-            <ul class="catalog-list">
-              <li class="catalog-item">
-                <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000"><br>
-                <div class="title">Перфоратор BOSCH BFG 9000</div>
-                <div class="price">32500 Р.</div>
-                <div>
-                  <a href="#"><span>25500 Р.</span></a>
-                </div>
-              </li>
-              <li class="catalog-item">
-                <img src="img/product002.png" width="184" height="164" alt=" BOSCH BFG 3000">
-                <div class="title">Перфоратор BOSCH BFG 3000</div>
-                <div class="price">32500 Р.</div>
-                <div>
-                  <a href="#"><span>25500 Р.</span></a>
-                </div>
-              </li>
-              <li class="catalog-item">
-                <div>
-                  <button type="button" class="button">
-                    <span>Купить</span>
-                  </button>
-                  <button type="button" class="button">
-                    <span>В заеладки</span>
-                  </button>
-                </div>
-                <div class="title">Перфоратор BOSCH BFG 2000</div>
-                <div class="price">32500 Р.</div>
-                <div>
-                  <a href="#"><span>25500 Р.</span></a>
-                </div>
-              </li>
-            </ul>
+          <section class="filter">
+            <h2>Фильтор:</h2>
+            <form>
+              <div>
+                <!-- TODO PRICE -->
+              </div>
+              <div>
+                <fieldset>
+                  <legend>Производители:</legend>
+                  <label>
+                    <input type="checkbox" name="madeBy" value="1">
+                    Bosh
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="madeBy" value="2">
+                    Интерскол
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="madeBy" value="3">
+                    Makita
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="madeBy" value="4">
+                    Dewalt
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="madeBy" value="5">
+                    Hitachi
+                  </label>
+
+                </fieldset>
+              </div>
+              <div>
+                <fieldset>
+                  <legend>Питание:</legend>
+                  <label>
+                    <input
+                      type="radio"
+                      name="power"
+                      value="B"
+                      checked
+                    />
+                    <span>Акуммуляторное</span>
+                  </label>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="power"
+                      value="M"
+                    />
+                    <span>Сетевые</span>
+                  </label>
+                </fieldset>
+              </div>
+              <fieldset>
+                <button class="filter-button" type="submit">Показать</button>
+              </fieldset>
+            </form>
           </section>
 
+          <section>
+            <div>
+              <form action="#" method="get">
+                <fieldset>
+                  <legend>Сортитовка:</legend>
+                  <select name="sort">
+                    <option value="P">По Цене</option>
+                    <option value="T">По Типу</option>
+                    <option value="F">По Функционалу</option>
+                  </select>
+                  <button type="button">
+                    <img src="img/icon-triangle-up.svg" width="11" height="10">
+                  </button>
+                  <button type="button">
+                    <img src="img/icon-triangle-down.svg" width="11" height="10">
+                  </button>
+                </fieldset>
+              </form>
+            </div>
 
-          <!-- Paging -->
-          <!-- Option 1. Conider using display: flex and have a look at justify-content-->
-          <ul class="pagination-list">
-            <li class="current">1</li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li class="next"><a href="#">Следующая</a></li>
-          </ul>
+            <section class="catalog">
+              <h2 class="visually-hidden">Каталог</h2>
+              <ul class="catalog-list">
+                <li class="catalog-item">
+                  <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000"><br>
+                  <div class="title">Перфоратор BOSCH BFG 9000</div>
+                  <div class="price">32500 Р.</div>
+                  <div>
+                    <a href="#"><span>25500 Р.</span></a>
+                  </div>
+                </li>
+                <li class="catalog-item">
+                  <img src="img/product002.png" width="184" height="164" alt=" BOSCH BFG 3000">
+                  <div class="title">Перфоратор BOSCH BFG 3000</div>
+                  <div class="price">32500 Р.</div>
+                  <div>
+                    <a href="#"><span>25500 Р.</span></a>
+                  </div>
+                </li>
+                <li class="catalog-item">
+                  <div>
+                    <button type="button" class="button">
+                      <span>Купить</span>
+                    </button>
+                    <button type="button" class="button">
+                      <span>В заеладки</span>
+                    </button>
+                  </div>
+                  <div class="title">Перфоратор BOSCH BFG 2000</div>
+                  <div class="price">32500 Р.</div>
+                  <div>
+                    <a href="#"><span>25500 Р.</span></a>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+
+            <!-- Paging -->
+            <!-- Option 1. Conider using display: flex and have a look at justify-content-->
+            <ul class="pagination-list">
+              <li class="current">1</li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li class="next"><a href="#">Следующая</a></li>
+            </ul>
+          </section>
         </section>
-      </section>
+      </div>
+
       <section>
         <h2>Пара слов о перфераторах</h2>
         <p>

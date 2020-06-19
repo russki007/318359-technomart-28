@@ -26,12 +26,6 @@
   --font-ptsans: "PT Sans", sans-serif;
 }
 
-/* OUTLINES START - DELETE */
-footer, footer section, header section, header p, footer p {
-  outline: 3px dashed rgba(0, 255, 0, 0.4);
-  outline-offset: -3px;
-}
-
 *,
 *::before,
 *::after {
@@ -42,8 +36,6 @@ main {
   outline: 3px dashed rgba(255, 0, 0, 0.4);
   offset: -3px;
 }
-
-/* OUTLINES END - DELETE */
 
 html {
   height: 100%;
@@ -424,30 +416,51 @@ body {
   left: 24px;
 }
 
-  /* BREADCRUMBS */
+ /* BREADCRUMBS */
 .breadcrumbs-list {
   list-style: none;
   padding: 0;
   font-size: 13px;
   line-height: 18px;
+  display: flex;
 }
 
-.breadcrumbs-list a {
+.breadcrumbs-item {
   color: var(--color-black);
+  font-family: var(--font-ptsans);
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
 }
 
+.breadcrumbs-item::after {
+  content: "";
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 12px;
+  display: block;
+  margin-right: 17px;
+  margin-left: 17px;
+}
+
+.breadcrumbs-item.current::after{
+  display: none;
+}
+
+.breadcrumbs-list a,
 .breadcrumbs-list a:hover,
-.breadcrumbs-list a:focus {
+.breadcrumbs-list a:visited,
+.breadcrumbs-list a:active {
   text-decoration: none;
-}
-
-.breadcrumbs-current {
   color: var(--color-black);
 }
 
 /* MAIN */
 .main {
-  margin-top: 59px;
+
 }
 
 .main h2 {
@@ -469,7 +482,11 @@ body {
   align-items: center;
   padding-left: 14px;
   padding-right: 14px;
- }
+}
+
+.grey {
+  background-color: #F2F6F8; /* TODO: Move to vars */
+}
 
 .banner a {
   grid-column-start: -1;
