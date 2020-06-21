@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/demo.css">
+  </head>
+  </head>
+  <body>
+    <main>
+
+      <section>
+        <h2>Slider</h2>
+        <div class="slider outline">
+          <ul class="slider-list">
+            <li class="slider-item">
+              <div class="slider-banner">
+                <span class="slider-title">Pic 1</span>
+              </div>
+              <img src="https://placebear.com/320/180" width="320" height="180">
+              <a href="#" class="button slider-button">GO</a>
+            </li>
+            <li class="slider-item">
+              <div class="slider-banner">
+                <span class="slider-title">Pic 2</span>
+              </div>
+              <img src="https://placebear.com/320/180" width="320" height="180">
+              <a href="#" class="button slider-button">GO</a>
+            </li>
+          </ul>
+          <div class="slider-controls">
+            <button type="button" aria-label="1"></button>
+            <button class="current"  type="button" aria-label="2"></button>
+            <button type="button" aria-label="3"></button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Range Slider</h2>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-item">
+            <legend>Price</legend>
+            <div class="range-slider">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+
+              <div class="price-controls">
+                <label class="min-price">
+                  from <input type="number" name="min-price"
+                              value="0">
+
+                </label>
+
+                <label class="max-price">
+                  to <input type="number" name="max-price"
+                          value="100">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">Go</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Flex</h2>
+        <p>
+          justify-content: space-between pushes the elements at the
+          edge to the sides.
+        </p>
+        <div class="container">
+          <div class="box blue">L</div>
+          <div class="box red">R</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

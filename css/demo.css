@@ -1,0 +1,217 @@
+
+.outline {
+  outline: dashed 2px purple;
+  outline-offset: -2px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-font: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+
+/* Range slider */
+.filter-item {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  width: 260px;
+  margin: 0 auto;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-slider {
+  width: 260px;
+  margin-top: 10px;
+}
+
+.range-controls {
+  height: 41px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  position: relative;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-controls .bar {
+  width: 30%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid  #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  position: absolute;
+  top: 31px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.price-controls input {
+  font-family: inherit;
+  font-size: inherit;
+
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #283136;
+  border: none;
+  background-color: #f1f1f1;
+}
+
+/* Slider */
+.slider {
+  width: 680px;
+  position: relative;
+  height: 180px;
+}
+
+.slider-list {
+  list-style: none;
+  margin-left: 0;
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+.slider-title {
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.slider-item {
+  position: relative;
+}
+
+.slider-item .button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.slider-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(90, 58, 29, 0.5);
+  height: 40px;
+
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 20;
+
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls .current {
+  background-color: #ffffff;
+}
+
+.slider-controls .current::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border: 2px solid #000000;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #000000;
+}
