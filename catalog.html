@@ -184,13 +184,13 @@
           <!-- SORT -->
           <section class="sort">
             <h2>Сортитовка:</h2>
-            <div>
+            <div class="sort-controls">
               <input id="price" name="sort" type="radio" value="P" checked class="sort-input-radio visually-hidden">
               <label for="price">По Цене</label>
               <input id="type" name="sort" type="radio" value="T" class="sort-input-radio visually-hidden">
               <label for="type">По Типу</label>
-              <input id="function" name="sort" type="radio" value="F" class="sort-input-radio visually-hidden">
-              <label for="function">По Функционалу</label>
+              <input id="func" name="sort" type="radio" value="F" class="sort-input-radio visually-hidden">
+              <label for="func" >По Функционалу</label>
 
               <input id="asc" name="order" type="radio" checked class="order-input-radio visually-hidden">
               <label for="asc">
@@ -198,8 +198,7 @@
                   <path fill="#231F20" d="M5.5 0L0 10h11z"/>
                 </svg>
               </label>
-
-              <input id="desc" name="order" type="radio" class="order-input-radio visually-hidden ">
+              <input id="desc" name="order" type="radio" class="order-input-radio visually-hidden">
               <label for="desc">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                   <path fill="#231F20" d="M5.5 10L0 0h11"/>
@@ -211,7 +210,7 @@
           <section class="pager">
             <ul class="pagination-list">
               <li class="current">1</li>
-              <li><a href="#">2</a></li>
+              <li><a href="#" >2</a></li>
               <li><a href="#">3</a></li>
               <li class="next"><a href="#">Следующая</a></li>
             </ul>
@@ -229,7 +228,16 @@
                 </a>
               </li>
 
-              <li class="catalog-item spread">
+              <li class="catalog-item">
+                <a href="blank.html">
+                  <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000">
+                  <div class="title">Перфоратор BOSCH BFG 9000</div>
+                  <div class="price">32500 Р.</div>
+                  <div class="price-current">25500 Р.</div>
+                </a>
+              </li>
+
+              <li class="catalog-item">
                 <a href="blank.html">
                   <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000">
                   <div class="title">Перфоратор BOSCH BFG 9000</div>
@@ -256,15 +264,6 @@
                 </a>
               </li>
 
-              <li class="catalog-item spread">
-                <a href="blank.html">
-                  <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000">
-                  <div class="title">Перфоратор BOSCH BFG 9000</div>
-                  <div class="price">32500 Р.</div>
-                  <div class="price-current">25500 Р.</div>
-                </a>
-              </li>
-
               <li class="catalog-item">
                 <a href="blank.html">
                   <img src="img/product001.png" width="184" height="164" alt="BOSCH BFG 9000">
@@ -273,7 +272,6 @@
                   <div class="price-current">25500 Р.</div>
                 </a>
               </li>
-
 
               <li class="catalog-item">
                 <a href="blank.html">
@@ -305,17 +303,19 @@
         </div>
       </div>
 
-      <!--      <section>-->
-      <!--        <h2>Пара слов о перфераторах</h2>-->
-      <!--        <p>-->
-      <!--          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в-->
-      <!--          кирпиче, бетоне и камне.-->
-      <!--          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,-->
-      <!--          шуруповерта и отбойного молотка.-->
-      <!--          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и-->
-      <!--          ударная дрель.-->
-      <!--        </p>-->
-      <!--      </section>-->
+      <section class="section-grey">
+        <div class="container">
+          <h2>Пара слов о перфераторах</h2>
+          <p>
+            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+            кирпиче, бетоне и камне.
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+            шуруповерта и отбойного молотка.
+            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+            ударная дрель.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

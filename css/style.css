@@ -422,6 +422,9 @@ body {
   line-height: 18px;
   display: flex;
   justify-content: flex-start;
+
+  outline: 1px dashed rgba(255, 0, 0, 0.4);
+  offset: -1px;
 }
 
 .breadcrumbs-item {
@@ -459,9 +462,8 @@ body {
 
 /* MAIN */
 .main {
-  margin: 5px;
-  outline: 3px dashed rgba(255, 0, 0, 0.4);
-  offset: -3px;
+  outline: 1px dashed rgba(255, 0, 0, 0.4);
+  outline-offset: -1px;
 }
 
 .main h2 {
@@ -478,11 +480,15 @@ body {
 .banner {
   background-color: #F9F5F0; /*TODO: Ask Alex about background colors or images */
   height: 89px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
   padding-left: 14px;
   padding-right: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  outline: 1px dashed rgba(255, 0, 0, 0.4);
+  offset: -1px;
 }
 
 .grey {
@@ -514,7 +520,7 @@ body {
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows:
     38px
     1fr
@@ -524,6 +530,9 @@ body {
     "f s s s"
     "f c c c"
     "f p p p";
+
+  outline: dashed 1px red;
+  outline: -1px;
 }
 
 /* TODO: Ask Alex, had to this in the container to stretch the catalog grid */
@@ -546,54 +555,77 @@ body {
 
 .pager {
   grid-area: p;
+
+  outline: dashed 1px purple;
 }
 
 /* SORTING */
 .sort {
   text-transform: uppercase;
-  display: grid;
-  grid-template-columns: min-content 1fr;
-
 
   grid-area: s;
   /*grid-column: 2 / -1;*/
+
+  border: none;
+  margin: 0;
+  padding: 0;
+
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .sort h2 {
   font-family: var(--font-ptsans);
   font-size: 13px;
   line-height: 18px;
-  margin-left: 19px;
-  width: 240px;
-  font-weight: normal;
+  font-weight: 400;
+  width: 220px;
+  padding-left: 19px;
+
+  outline: dashed 1px red;
+  outline-offset: -1px;
 }
 
-.sort div {
+.sort .sort-controls {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
+  margin-right: 14px;
+
+  outline: dashed 1px blue;
+  outline-offset: -1px;
 }
 
-.sort label {
+.sort-controls label {
   cursor: pointer;
+}
+
+.sort-input-radio + label {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .sort-input-radio:checked + label {
   color: var(--color-red4);
-  display: block;
 }
 
 .sort-input-radio:not(:checked) + label {
   border-bottom: dashed 1px var(--color-red4);
 }
 
-.order-input-radio:not(:checked) + label path {
-  fill: var(--color-greylight);
+.order-input-radio + label {
+  padding-left: 14px;
 }
 
 .order-input-radio:checked + label path {
   fill: var(--color-red4);
 }
+
+.order-input-radio:not(:checked) + label path {
+  fill: var(--color-greylight);
+}
+
 
 /* FILTER */
 .filter h2 {
@@ -673,6 +705,7 @@ body {
   */
 
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -684,11 +717,6 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 18px;
-}
-
-.spread {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .catalog-item .title {
@@ -750,18 +778,17 @@ body {
   list-style: none;
   display: flex;
 
-  outline: dashed 1px red;
-  outline: -1px;
 }
 
 .pagination-list li {
   width: 38px;
-  height: 38px;   /* TODO: Consider using lineheight: 2  or using lineheight 38px */
-  border: 1px solid var(--color-grey2);
-}
+  height: 38px;
 
-.pagination-list .current {
-  width: 38px;
+  font-family: var(--font-ptsans);
+  font-size: 13px;
+  line-height: 18px;
+
+  border: 1px solid var(--color-grey2);
 }
 
 .pagination-list .next {
