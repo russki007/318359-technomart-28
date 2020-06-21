@@ -50,8 +50,6 @@ body {
   color: var(--color-black);
 }
 
-/* TODO: */
-
 .header-logo {
   display: inline-block;
   outline: 5px solid rgba(255, 0, 0, 0.3);
@@ -305,13 +303,11 @@ body {
 }
 
 .promo-item a:hover {
-  /*background: var(--color-greylight);  /* TODO: Ask Alex, could not achieve this by setting background and opacity */
-  /*opacity: 0.3;*/
-  background: rgba(197, 197, 197, 0.30);  /* TODO: How to use vars in this notation */
+  background: rgba(197, 197, 197, 0.30);
 }
 
 .promo-item a:active {
-  background: rgba(169, 169, 169, 0.30);  /* TODO: How to use vars in this notation */
+  background: rgba(169, 169, 169, 0.30);  /* TODO: Checkout new notation */
 }
 
 .bucket {
@@ -478,7 +474,7 @@ body {
 }
 
 .banner {
-  background-color: #F9F5F0; /*TODO: Ask Alex about background colors or images */
+  background-color: #F9F5F0; /*TODO: Change to vars */
   height: 89px;
   padding-left: 14px;
   padding-right: 14px;
@@ -746,7 +742,7 @@ body {
 
   text-transform: uppercase;
   font-size: 17px;
-  line-height: 38px;  /* TODO: Check with Alex why? */
+  line-height: 38px;  /* TODO: Fix using padding */
   font-family: var(--font-ptsans);
   color: var(--color-white);
   position: relative;
@@ -811,7 +807,7 @@ body {
 
 .brand-item img {
   outline: solid 1px red;
-  outline-offset: -1px;  /* TODO: Align branch images center. How? */
+  outline-offset: -1px;  /* TODO: Align branch images center using flex */
 }
 
 .section-grey {
