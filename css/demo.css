@@ -1,8 +1,15 @@
-
 .outline {
   outline: dashed 2px purple;
   outline-offset: -2px;
 }
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 html {
   height: 100%;
@@ -15,8 +22,18 @@ body {
   font-weight: 400;
 }
 
+main > section {
+  outline: dashed 2px #cecece;
+  outline-offset: -2px;
+
+  margin: 10px;
+  padding: 5px;
+}
+
 h2 {
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .container {
@@ -215,3 +232,154 @@ h2 {
   border-radius: 50%;
   background-color: #000000;
 }
+
+/* MODEL WINDOW */
+.model {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+
+  /*box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);*/
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+
+  /*background: rgba(111, 111, 111, 0.3);*/
+
+  z-index: 100;
+  padding: 0;
+}
+
+.model-map {
+  top: 100px;
+  bottom: auto;
+  width: 943px;
+  height: 449px;
+  display: none;
+}
+
+.model-map img {
+  display: block; /* Remove bottom margin*/
+}
+
+.model-map iframe {
+  border: none;
+}
+
+.model::before {
+  content: "";
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  background-color: red;
+  top: 0;
+}
+
+.model-msg {
+  width: 620px;
+  height: 430px;
+  top: 150px;
+
+  background: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.model-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.model-close::before,
+.model-close::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: #ff0000;
+  border-radius: 2px;
+}
+
+.model-close::after {
+  transform: rotate(45deg);
+}
+
+.model-close::before {
+  transform: rotate(-45deg);
+}
+
+
+/* WRITE TO US */
+.msg-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 46px;
+}
+
+.msg-form .buttons {
+  background-color: #F4F4F4;
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msg-form input {
+  width: 220px;
+}
+
+.msg-form .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content > p:first-child,
+.content > p:last-child
+{
+  margin-left: 80px;
+  margin-right: 20px;
+}
+
+.msg-form textarea {
+  width: 460px;
+  height: 114px;
+  resize: none;
+}
+
+.msg-form .button {
+  display: block;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  background-color: red;
+  border: none;
+  font-size: 14px;
+  font-family: Arial;
+  width: 460px;
+  height: 38px;
+  line-height: 38px; /* TODO: Ask Alex, need to change line-heigt to center text vertically. OK? */
+  outline-style: none;
+}
+
+
