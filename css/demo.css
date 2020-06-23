@@ -256,7 +256,7 @@ h2 {
   bottom: auto;
   width: 943px;
   height: 449px;
-  display: none;
+  display: block;
 }
 
 .model-map img {
