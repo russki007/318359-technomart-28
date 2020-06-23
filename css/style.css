@@ -52,7 +52,7 @@ body {
 
 .logo {
   display: block;
-  background: #EE3643;
+  background: var(--color-red);
   position: relative;
   height: 42px;
   width: 220px;
@@ -78,9 +78,9 @@ body {
 }
 
 .footer-logo {
-
+  height: 68px;
+  width: 220px;
 }
-
 
 .container {
   width: 940px;
@@ -484,8 +484,8 @@ body {
 
 /* MAIN */
 .main {
-  outline: 2px dashed rgba(255, 0, 0, 0.4);
-  outline-offset: -2px;
+  /*outline: 2px dashed rgba(255, 0, 0, 0.4);*/
+  /*outline-offset: -2px;*/
 
   padding-bottom: 70px;
 }
@@ -848,42 +848,50 @@ body {
 
 
  /* FOOTER */
-
 .footer {
   background-color: var(--color-greydark2);
   font-family: var(--font-cuprum);
 }
 
-.footer-pane-upper {
-
-}
-
-.footer-pane-lower {
-  background-color: var(--color-greydark);
-}
-
-.footer-pane-lower .container {
+.footer-upane {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 193px;
 }
 
-.footer-nav {
+.footer-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-width: 546px;
+  justify-content: space-between;
+
+  font-family: var(--font-cuprum);
   font-size: 18px;
   line-height: 24px;
 }
 
-.footer-nav-list {
-  padding: 0;
-  list-style: none;
-  color: var(--color-background);
+.footer-upane span {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-white);
+  display: block;
+  margin-top: 27px;
+}
+
+.footer-nav-list.upper-menu {
   display: flex;
-  justify-content: space-around;
+  align-items: flex-end;
 }
 
-.footer-nav-item {
+.footer-upane > ul:last-child {
+  padding-left:  23px;
+  margin-top: 27px;
 }
 
-.footer-nav a, .footer-nav a:hover, .footer-nav a:focus  {
+.footer a, .footer a:hover, .footer a:focus  {
   color: var(--color-white);
 }
 
@@ -891,20 +899,36 @@ footer .link-text-yellow {
   color: var(--color-ylellow);
 }
 
+
+/*
+.footer-upane ul {
+  outline: dashed 1px blue;
+  outline-offset: -1px;
+}
+
+.footer-upane span {
+  margin-top: 22px;
+}
+
+
+
+.footer-nav-item {
+}
+
+
+
 footer .small-text-white {
   font-size: 16px;
   line-height: 24px;
   color: var(--color-white);
 }
 
-.address-text {
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--color-white);
-}
+
+*/
 
 .copyright {
-
+  outline: dashed 2px red;
+  outline-offset: -2px;
 }
 
 .contacts-list {
@@ -912,6 +936,9 @@ footer .small-text-white {
   padding: 0;
   color: var(--color-white);
   display: flex;
+
+  outline: dashed 2px red;
+  outline-offset: -2px;
 }
 
 .contacts-list-item {
@@ -978,4 +1005,3 @@ img {
 .hidden {
   display: none;
 }
-
