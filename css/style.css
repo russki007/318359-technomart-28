@@ -899,61 +899,86 @@ footer .link-text-yellow {
   color: var(--color-ylellow);
 }
 
-
-/*
-.footer-upane ul {
-  outline: dashed 1px blue;
-  outline-offset: -1px;
-}
-
-.footer-upane span {
-  margin-top: 22px;
-}
-
-
-
-.footer-nav-item {
-}
-
-
-
 footer .small-text-white {
   font-size: 16px;
   line-height: 24px;
   color: var(--color-white);
 }
 
+.footer-bpane {
+  background-color: var(--color-greydark);
+  height: 107px;
+  display: flex;
+}
 
-*/
+.footer-bpane .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bpane .right-column {
+  display: flex;
+}
+
+.right-column p:last-child {
+  margin-right: 13px;
+  margin-left: 51px;
+}
 
 .copyright {
-  outline: dashed 2px red;
-  outline-offset: -2px;
+  font-family: var(--font-cuprum);
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-white);
+  width: 227px;
 }
 
 .contacts-list {
   list-style: none;
   padding: 0;
   color: var(--color-white);
-  display: flex;
 
-  outline: dashed 2px red;
-  outline-offset: -2px;
+  width: 132px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contacts-list-item {
   text-align: center;
+  background: linear-gradient(0deg, #212A3A, #212A3A);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.fb-icon {
+  background-image: url("../img/icon-fb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vk-icon {
+  background-image: url("../img/icon-vk.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.instra-icon {
+  background-image: url("../img/icon-insta.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .contacts-list-item img {
   border-radius: 50%;
 }
 
-footer .contacts-button {
+.contacts-button {
   display: inline-block;
-  width: 40px;
+  width: 100%;
+  height: 100%;
 }
-
 
 /* BUTTONS */
 .button-red {
