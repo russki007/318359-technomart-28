@@ -658,8 +658,8 @@ body {
   display: flex;
   justify-content: flex-start;
 
-  outline: 1px dashed rgba(255, 0, 0, 0.4);
-  offset: -1px;
+  /*outline: 1px dashed rgba(255, 0, 0, 0.4);*/
+  /*outline-offset: -1px;*/
 }
 
 .breadcrumbs-item {
@@ -697,11 +697,8 @@ body {
 
 /* MAIN */
 .main {
-  outline: 2px dashed rgba(255, 0, 0, 0.4);
-  outline-offset: -2px;
-
-
-
+  /*outline: 2px dashed rgba(255, 0, 0, 0.4);*/
+  /*outline-offset: -2px;*/
 }
 
 .main h2 {
@@ -725,8 +722,8 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  outline: 1px dashed rgba(255, 0, 0, 0.4);
-  offset: -1px;
+  /*outline: 1px dashed rgba(255, 0, 0, 0.4);*/
+  /*offset: -1px;*/
 }
 
 .grey {
@@ -756,7 +753,6 @@ body {
   line-height: 24px;
 }
 
-
 .catalog-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -770,8 +766,10 @@ body {
     "f c c c"
     "f p p p";
 
-  outline: dashed 1px red;
-  outline: -1px;
+  margin-top: 20px;
+
+  /*outline: dashed 1px red;*/
+  /*outline-offset: -1px;*/
 }
 
 /* TODO: Ask Alex, had to this in the container to stretch the catalog grid */
@@ -794,12 +792,13 @@ body {
 
 .pager {
   grid-area: p;
-
-  outline: dashed 1px purple;
 }
 
 /* SORTING */
 .sort {
+
+  background-color: var(--color-brown);
+
   text-transform: uppercase;
 
   grid-area: s;
@@ -928,6 +927,7 @@ body {
 /* CATALOG */
 
 .catalog {
+  padding-top: 28px;
 }
 
 .catalog-list {
