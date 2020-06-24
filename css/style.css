@@ -697,10 +697,11 @@ body {
 
 /* MAIN */
 .main {
-  /*outline: 2px dashed rgba(255, 0, 0, 0.4);*/
-  /*outline-offset: -2px;*/
+  outline: 2px dashed rgba(255, 0, 0, 0.4);
+  outline-offset: -2px;
 
-  padding-bottom: 70px;
+
+
 }
 
 .main h2 {
@@ -736,11 +737,12 @@ body {
   grid-column-start: -1;
 }
 
-.banner-text {
+.big-heading {
   text-transform: uppercase;
   color: #32425C;  /* TODO: replace with var */
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
 }
 
 .courier-list {
@@ -1053,6 +1055,12 @@ body {
 
 .section-grey {
   background-color: #F1F5F7;
+  padding-top: 64px;
+}
+
+.section-grey p {
+  margin-top: 25px;
+  margin-bottom: 68px;
 }
 
 .two-columns-layout {
