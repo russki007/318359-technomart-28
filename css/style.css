@@ -948,22 +948,28 @@ body {
   border: solid 1px var(--color-grey2);
   min-height: 318px;
   width: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 18px;
-  justify-content: space-between;
 }
 
-.catalog-item a {
-  display: block;
-  width: 100%;
+.catalog-item {
+}
 
-  margin-top: 22px;
+.catalog-item .tile {
+  display: block;
+  padding-top: 22px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.catalog-item .placeholder {
+  flex-grow: 1;
+  margin-bottom: 10px;
 }
 
 .catalog-item .title {
@@ -972,8 +978,8 @@ body {
   line-height: 20px;
   text-align: center;
   width: 184px;
-  margin-top: 28px;
   color: var(--color-black);
+  margin-bottom: 7px;
 }
 
 .catalog-item .price {
@@ -983,18 +989,14 @@ body {
   text-decoration-line: line-through;
   text-transform: uppercase;
   font-weight: 700;
-  margin-top: 7px;
+  margin-bottom: 13px;
 }
 
 .catalog-item .price-current-group {
   width: 141px;
   height: 38px;
-  margin-top: 13px;
-
+  margin-bottom: 21px;
   display: flex;
-  /*justify-content: space-between;*/
-  /*flex-wrap: wrap;*/
-
   position: relative;
 }
 
@@ -1002,8 +1004,8 @@ body {
   display: block;
   background: var(--color-red);
   text-align: center;
-  border-radius: 2px 0 0 2px;
- width: 100%;
+  border-radius: 3px 0 0 3px;
+  width: 100%;
   padding-top: 10px;
 
   text-transform: uppercase;
@@ -1025,8 +1027,8 @@ body {
   border-color: var(--color-white) transparent var(--color-white) var(--color-red);
 }
 
-
-.catalog-item .button {
+.button-green {
+  display: block;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
@@ -1034,6 +1036,35 @@ body {
   font-family: var(--font-cuprum);
   width: 135px;
   height: 38px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  box-shadow: inset 0px -3px 0px #367315;
+  background: #63A63E;
+  padding-top: 10px;
+  color: var(--color-white);
+}
+
+.buy-btn:hover {
+  background: #5FBB2D;
+}
+
+.buy-btn:active {
+  background: #518534;
+}
+
+.bookmark-btn {
+  background-color: transparent;
+  border: solid 3px #63A63E;
+  box-shadow: none;
+  color: #32425C;
+}
+
+.bookmark-btn:hover {
+  border: solid 3px #32425C;
+}
+
+.bookmark-btn:active {
+  opacity: 0.5;
 }
 
 
@@ -1267,6 +1298,7 @@ footer .small-text-white {
   color: var(--color-red);
 }
 
+
 /* BUTTONS */
 .button-red {
   display: block;
@@ -1294,10 +1326,7 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 
 .visually-hidden {
   position: absolute;
