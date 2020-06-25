@@ -779,13 +779,6 @@ body {
   grid-area: c;
 }
 
-.filter {
-  width: 220px;
-  /*grid-column: 1;*/
-  /*gird-row: span 1 / -1*/
-  grid-area: f;
-}
-
 .pager {
   grid-area: p;
 }
@@ -862,6 +855,13 @@ body {
 
 
 /* FILTER */
+.filter {
+  width: 220px;
+  /*grid-column: 1;*/
+  /*gird-row: span 1 / -1*/
+  grid-area: f;
+}
+
 .filter h2 {
   font-family: var(--font-ptsans);
   font-size: 13px;
@@ -941,12 +941,17 @@ body {
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: var(--color-greylight);
+  /*border-top-width: 1px;*/
+  /*border-top-style: solid;*/
+  /*border-top-color: var(--color-greylight);*/
   width: 100%;
-  padding-top: 14px;
-  margin-bottom: 17px;
+  /*padding-top: 14px;*/
+  /*margin-bottom: 17px;*/
+}
+
+.makers-list ,
+.power-filter {
+
 }
 
 .filter ul {
@@ -965,6 +970,8 @@ body {
   user-select: none;
   position: relative;
   padding-left: 35px;
+
+  margin-top: 15px;
 }
 
 .filter li {
@@ -1439,4 +1446,90 @@ a {
 
 .hidden {
   display: none;
+}
+
+/* RANGE SLIDER */
+.range-slider {
+  width: 220px;
+}
+
+.range-controls {
+  height: 80px;
+  background-color: var(--color-brown);
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  position: relative;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-controls .bar {
+  width: 30%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid  #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  position: absolute;
+  top: 31px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.price-controls .dash {
+  display: block;
+  content: "";
+  width: 9px;
+  height: 2px;
+  background: #444444;
+}
+
+.price-controls input {
+  font-family: var(--font-ptsans);
+  font-size: 17px;
+  line-height: 18px;
+
+  width: 95px;
+  height: 38px;
+
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #283136;
+  border: none;
+  background-color: var(--color-brown);
 }
