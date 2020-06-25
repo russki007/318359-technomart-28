@@ -1118,6 +1118,8 @@ body {
   border-radius: 3px;
   text-align: center;
   text-transform: uppercase;
+
+  color: var(--color-black);
 }
 
 .pagination-list a:active {
@@ -1133,6 +1135,7 @@ body {
 
 .pagination-list .next-page {
   width: 140px;
+
 }
 
 .brand-list {
