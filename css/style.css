@@ -942,6 +942,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
 }
 
 .catalog-item {
@@ -949,9 +950,8 @@ body {
   min-height: 318px;
   width: 220px;
   margin-bottom: 18px;
-}
 
-.catalog-item {
+  position: relative;
 }
 
 .catalog-item .tile {
@@ -1056,6 +1056,18 @@ body {
   height: 15px;
   position: absolute;
   background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.new-tag::before {
+  content: "";
+  right: 0;
+  top: 0px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  background-image: url("../img/new-tag.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
