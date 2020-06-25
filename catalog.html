@@ -133,24 +133,24 @@
               </div>
               <fieldset>
                 <legend>Производители:</legend>
-                <ul>
+                <ul class="makers-list">
                   <li>
-                    <label>
-                      <input type="checkbox" name="make" value="1">
+                    <label class="on">
+                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="make" value="1">
                       Bosh
                     </label>
                   </li>
 
                   <li>
                     <label>
-                      <input type="checkbox" name="make" value="2">
+                      <input class="visually-hidden" type="checkbox" name="make" value="2">
                       Интерскол
                     </label>
                   </li>
 
                   <li>
-                    <label>
-                      <input type="checkbox" name="make" value="3">
+                    <label class="on">
+                      <input class="visually-hidden" type="checkbox" name="make" value="3">
                       Makita
                     </label>
 
@@ -158,13 +158,13 @@
 
                   <li>
                     <label>
-                      <input type="checkbox" name="make" value="4">
+                      <input class="visually-hidden" type="checkbox" name="make" value="4">
                       Dewalt
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input type="checkbox" name="make" value="5">
+                      <input class="visually-hidden" type="checkbox" name="make" value="5">
                       Hitachi
                     </label>
                   </li>
@@ -172,10 +172,11 @@
               </fieldset>
               <fieldset>
                 <legend>Питание:</legend>
-                <ul>
+                <ul class="power-filter">
                   <li>
-                    <label>
+                    <label class="on">
                       <input
+                        class="visually-hidden"
                         type="radio"
                         name="power"
                         value="B"
@@ -187,6 +188,7 @@
                   <li>
                     <label>
                       <input
+                        class="visually-hidden"
                         type="radio"
                         name="power"
                         value="M"

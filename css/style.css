@@ -877,6 +877,58 @@ body {
   margin: 0 0 5px;
 }
 
+.makers-list label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.makers-list label.on::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.power-filter label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.power-filter label.on::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .filter fieldset {
   padding: 0;
   margin: 0;
@@ -889,6 +941,12 @@ body {
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--color-greylight);
+  width: 100%;
+  padding-top: 14px;
+  margin-bottom: 17px;
 }
 
 .filter ul {
@@ -902,6 +960,11 @@ body {
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-left: 35px;
 }
 
 .filter li {
