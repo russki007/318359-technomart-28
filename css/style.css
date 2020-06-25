@@ -1029,7 +1029,6 @@ body {
 
 .button-green {
   display: block;
-  text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
@@ -1042,6 +1041,23 @@ body {
   background: #63A63E;
   padding-top: 10px;
   color: var(--color-white);
+  position: relative;
+}
+
+.buy-btn {
+  padding-left: 50px;
+}
+
+.buy-btn::before {
+  content: "";
+  left: 30px;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .buy-btn:hover {
@@ -1053,6 +1069,7 @@ body {
 }
 
 .bookmark-btn {
+  text-align: center;
   background-color: transparent;
   border: solid 3px #63A63E;
   box-shadow: none;
