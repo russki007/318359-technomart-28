@@ -1229,30 +1229,35 @@ body {
 .brand-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 70px;
+  justify-content: space-between;
 }
 
 .brand-item {
   border: solid 1px var(--color-grey2);
   height: 145px;
+  width: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .brand-item img {
-  outline: solid 1px red;
-  outline-offset: -1px;  /* TODO: Align branch images center using flex */
+  object-fit: contain;
 }
 
 .section-grey {
   background-color: #F1F5F7;
   padding-top: 64px;
+  min-height: 522px;
 }
 
 .section-grey p {
   margin-top: 25px;
-  margin-bottom: 68px;
+  margin-bottom: 28px;
 }
 
 .col-x2 {
@@ -1462,6 +1467,8 @@ footer .small-text-white {
   font-family: var(--font-cuprum);
   height: 38px;
   line-height: 38px; /* TODO: Ask Alex, need to change line-heigt to center text vertically. OK? */
+  padding-left: 38px;
+  padding-right: 38px;
 }
 
 .button-red:hover {
@@ -1580,4 +1587,147 @@ a {
   color: #283136;
   border: none;
   background-color: var(--color-brown);
+}
+
+/* SIDE MENU */
+.side-menu {
+  display: flex;
+  /*background-color: #F1F5F7;*/
+  background-color: #F1F5F7;
+  margin: 0;
+  justify-content: flex-start;
+
+
+  /*background-image: url("../img/line.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: 235px 10px;*/
+
+  /*outline: dashed 2px #3D546F;*/
+  /*outline-offset: -2px;*/
+}
+
+.side-menu__navbar {
+  position: relative;
+  align-self: start;
+  list-style: none;
+  margin: 0;
+  padding: 41px 0;
+  width: 240px;
+
+  /*outline: dashed 2px red;*/
+  /*outline-offset: -2px;*/
+}
+
+
+.side-menu__content:not(:target) {
+  display: none;
+}
+
+.side-menu__content:target {
+  display: block;
+}
+
+.side-menu__navbar::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 100%;
+  top: 5px;
+  bottom: 5px;
+  width: 24px;
+  border-radius: 50%;
+  box-shadow: -7px 0 10px 0px hsla(0, 0%, 10%, 0.2);
+}
+
+.side-menu__tab {
+  box-sizing: border-box;
+  display: block;
+  padding: 20px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #32425c;
+  border-top: 1px #405069 solid;
+  border-bottom: 1px #293449 solid;
+  font-family: var(--font-cuprum);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  width: 240px;
+}
+
+.side-menu__tab.current {
+  background-color: var(--color-white);
+  color: #32425C;
+  border-top: 1px var(--color-white) solid;
+}
+
+.side-menu__navbar :not(.current):hover {
+  background-color: #293449;
+}
+
+.side-menu .content-panel {
+  z-index: 1;
+  flex-grow: 1;
+  position: relative;
+  background: #F1F5F7;
+  /*outline: dashed 2px green;*/
+  /*outline-offset: -2px;*/
+}
+
+.side-menu__content {
+  min-height: 100%;
+  padding: 30px 50px 30px 70px;
+  background: transparent;
+}
+
+#delivery::after {
+  content: "";
+  right: 0;
+  top: 30px;
+  width: 468px;
+  height: 261px;
+  position: absolute;
+  background-image: url("../img/delivery-background.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+#warranty::after {
+  content: "";
+  right: 0px;
+  top: 0;
+  width: 468px;
+  height: 261px;
+  position: absolute;
+  background-image: url("../img/warranty-background.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#finance::after {
+  content: "";
+  right: 0;
+  top: 40px;
+  width: 465px;
+  height: 285px;
+  position: absolute;
+  background-image: url("../img/finance-background.png");
+  background-position: 0;
+  background-repeat: no-repeat;
+}
+
+#finance .button-red {
+  width: 212px;
+}
+
+.side-menu__content h3 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-cuprum);
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425C;
+  font-weight: normal;
 }

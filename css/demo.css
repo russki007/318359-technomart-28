@@ -438,7 +438,7 @@ h2 {
 .side-menu {
   display: flex;
   /*background-color: #F1F5F7;*/
-  background-color: hsl(204 29% 97%);
+  background-color: #F1F5F7;
   margin: 0 50px;
 
   /*background-image: url("../img/line.png");*/
@@ -507,5 +507,5 @@ h2 {
   width: 400px;
   min-height: 100%;
   padding: 30px 50px;
-  background-color: hsl(204 29% 97%);
+  background-color: #F1F5F7;
 }
