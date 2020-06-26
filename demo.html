@@ -12,8 +12,29 @@
   <body>
     <main>
       <section>
-        <h2>Menu</h2>
-
+        <h2>Side Menu</h2>
+        <div class="side-menu">
+          <ul class="side-menu__navbar">
+            <li><a class="side-menu__tab" href="#delivery">Доставка</a></li>
+            <li><a class="side-menu__tab" href="#warranty">Гарантия</a></li>
+            <li><a class="side-menu__tab" href="#finance">Кредит</a></li>
+          </ul>
+          <div class="content-panel">
+            <section class="side-menu__content" id="delivery">
+              <h3>Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+            </section>
+            <section class="side-menu__content" id="warranty">
+              <h3>Гарантия</h3>
+              <p>Если купленный у нас товар поломается или заискрит,
+                а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+            </section>
+            <section class="side-menu__content" id="finance">
+              <h3>Кредит</h3>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+            </section>
+          </div>
+        </div>
 
       </section>
 
@@ -48,7 +69,7 @@
         <section>
           <h2>Model Windows</h2>
 
-          <section class="model model-map">
+          <section class="model model-map hide">
             <h2 class="visually-hidden">Как добраться</h2>
             <button type="button" aria-label="Закрыть" class="model-close">
 <!--              <img src="img/icon-close.svg" alt="Закрыть">-->

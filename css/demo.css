@@ -256,7 +256,6 @@ h2 {
   bottom: auto;
   width: 943px;
   height: 449px;
-  display: block;
 }
 
 .model-map img {
@@ -399,6 +398,8 @@ h2 {
   outline-offset: -1px;
 }
 
+
+
 .footer-upane span {
   margin-top: 22px;
 }
@@ -431,4 +432,80 @@ h2 {
 /* CSS Selector */
 .nav-item.current a:not([href]) {
   background: yellow;
+}
+
+/* SIDE MENU */
+.side-menu {
+  display: flex;
+  /*background-color: #F1F5F7;*/
+  background-color: hsl(204 29% 97%);
+  margin: 0 50px;
+
+  /*background-image: url("../img/line.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: 235px 10px;*/
+
+  /*outline: dashed 2px #3D546F;*/
+  /*outline-offset: -2px;*/
+}
+
+.side-menu__navbar {
+  position: relative;
+  align-self: start;
+  list-style: none;
+  margin: 0;
+  padding: 50px 0;
+  width: 240px;
+
+  /*outline: dashed 2px red;*/
+  /*outline-offset: -2px;*/
+}
+
+.side-menu__content:not(:target) {
+  display: none;
+}
+
+.side-menu__content:target {
+  display: block;
+}
+
+.side-menu__navbar::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 100%;
+  top: 5px;
+  bottom: 5px;
+  width: 24px;
+  border-radius: 50%;
+  box-shadow: -7px 0 10px 0px hsla(0, 0%, 10%, 0.2);
+}
+
+.side-menu__tab {
+  box-sizing: border-box;
+  display: block;
+  padding: 20px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #32425c;
+  border-top: 1px #405069 solid;
+  border-bottom: 1px #293449 solid;
+}
+
+.side-menu__tab:hover {
+  background-color: #293449;
+}
+
+.side-menu .content-panel {
+  z-index: 1;
+  outline: dashed 2px #3BBCE3;
+  outline-offset: -2px;
+  display: flex;
+}
+
+.side-menu__content {
+  width: 400px;
+  min-height: 100%;
+  padding: 30px 50px;
+  background-color: hsl(204 29% 97%);
 }
