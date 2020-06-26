@@ -277,9 +277,11 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
   justify-content: space-between;
   min-height: 60px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header-nav-item {
@@ -706,6 +708,7 @@ body {
   font-size: 30px;
   line-height: 30px;
   font-family: var(--font-cuprum);
+  margin: 0;
 }
 
 .main p {
@@ -742,13 +745,23 @@ body {
 
 .courier-list {
   list-style: none;
-  padding: 0;
+  padding: 0px;
 }
 
-.courier-list-item {
+.courier-list li {
   font-family: var(--font-cuprum);
   font-size: 18px;
   line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.courier-list li::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: red;
+  margin-right: 12px;
 }
 
 .catalog-grid {
@@ -1042,6 +1055,11 @@ body {
   margin-bottom: 10px;
 }
 
+.placeholder img {
+  object-fit: contain;
+  margin: 0;
+}
+
 .catalog-item .title {
   font-weight: 700;
   font-size: 18px;
@@ -1237,12 +1255,43 @@ body {
   margin-bottom: 68px;
 }
 
-.two-columns-layout {
-  display: flex;
+.col-x2 {
+  display: grid;
+  grid-template-columns: 1fr  min-content;
+  margin-bottom: 70px;
+  margin-top: 70px;
 }
 
+.col-x2 .col-1, .col-x2 .col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
- /* FOOTER */
+.col-1 .button-red {
+  width: 220px;
+}
+
+.col-2 .button-red {
+  width: 300px;
+  margin-top: 25px;
+}
+
+.col-x2 p {
+  margin: 0;
+}
+
+.col-x2 h2 {
+  margin: 0 0 24px;
+}
+
+.map-image {
+  width: 300px;
+  height: 158px;
+  margin: 32px 0 0;
+}
+
+/* FOOTER */
 .footer {
   background-color: var(--color-greydark2);
   font-family: var(--font-cuprum);
@@ -1411,7 +1460,6 @@ footer .small-text-white {
   border: none;
   font-size: 14px;
   font-family: var(--font-cuprum);
-  width: 192px;
   height: 38px;
   line-height: 38px; /* TODO: Ask Alex, need to change line-heigt to center text vertically. OK? */
 }

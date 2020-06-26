@@ -428,3 +428,7 @@ h2 {
   margin-top: 22px;
 }
 
+/* CSS Selector */
+.nav-item.current a:not([href]) {
+  background: yellow;
+}
