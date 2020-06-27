@@ -1012,7 +1012,15 @@ body {
   margin: 0 0 5px;
 }
 
-.makers-list label::before {
+.makers-list input:checked + label:before {
+  display: block;
+}
+
+.makers-list input:not(:checked) + label:after {
+  display: block;
+}
+
+.makers-list label::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -1023,9 +1031,10 @@ body {
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  display: none;
 }
 
-.makers-list label.on::before {
+.makers-list label::before {
   content: "";
   position: absolute;
   left: 0px;
@@ -1036,6 +1045,7 @@ body {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  display: none;
 }
 
 .power-filter input:checked + label::before {
