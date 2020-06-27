@@ -419,19 +419,21 @@
     </footer>
 
     <!-- CONFIRMATION POPUP -->
-    <div class="hidden">
+    <div class="model model-confirm-msg hidden">
+      <h2 class="visually-hidden">Подтверждение</h2>
+      <button type="button" aria-label="Закрыть" class="model-close">
+      </button>
       <div>
-        <button type="button" aria-label="Закрыть">
-          <img src="img/icon-close.svg" alt="Закрыть">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <img src="img/icon-mark.svg" width="66" height="66">
-        <span>Товар добавлен в корзину</span>
-        <div>
-          <button type="button">Оформить Заказ</button>
-          <button type="button">Продолжить Покупки</button>
+        <div class="content-placeholder success">
+          <span >Товар добавлен в корзину</span>
+        </div>
+        <div class="buttons-panel">
+          <button class="button-red" type="button">Оформить Заказ</button>
+          <button class="button-red close-button" type="button">Продолжить Покупки</button>
         </div>
       </div>
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
