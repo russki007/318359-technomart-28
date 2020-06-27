@@ -1038,7 +1038,15 @@ body {
   background-position: 0 0;
 }
 
-.power-filter label::before {
+.power-filter input:checked + label::before {
+  display: block;
+}
+
+.power-filter input:not(:checked) + label::after {
+  display: block;
+}
+
+.power-filter label::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -1049,9 +1057,10 @@ body {
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  display: none;
 }
 
-.power-filter label.on::before {
+.power-filter label::before {
   content: "";
   position: absolute;
   left: 0px;
@@ -1062,6 +1071,7 @@ body {
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  display: none;
 }
 
 .filter fieldset {
