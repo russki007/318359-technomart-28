@@ -131,12 +131,32 @@
               <div class="van"></div>
             </div>
             <div class="promo-slider">
-              <figure class="slider-content">
-                <img src="img/promo-slide01.jpg" width="620" height="266" alt="Каталог">
-              </figure>
-              <button class="slider-button slider-button-back" type="button" disabled>Назад</button>
-              <button class="slider-button slider-button-next" type="button">Вперед</button>
-              <a class="button-red" href="blank.html">Открыть Каталог</a>
+              <ul class="slider-list">
+                <li class="slider-item">
+                  <div class="slider-banner">
+                    <h2>Перфораторы</h2>
+                    <span>Настоящие мужские игрушки</span>
+                  </div>
+                  <img src="img/promo-slide01.jpg" width="620" height="266">
+                  <a href="catalog.html" class="button-red">ОТКРЫТЬ КАТАЛОГ</a>
+                </li>
+                <li class="slider-item hidden">
+                  <div class="slider-banner">
+                    <h2>Дрели</h2>
+                    <span>Соседям на радость!</span>
+                  </div>
+                  <img src="img/promo-slide02.jpg" width="620" height="266">
+                  <a href="catalog.html" class="button-red">ОТКРЫТЬ КАТАЛОГ</a>
+                </li>
+              </ul>
+              <div class="slider-controls">
+                <button class="current"  type="button" aria-label="1"></button>
+                <button type="button" aria-label="2"></button>
+              </div>
+              <div class="slider-nav">
+                <button class="slider-button slider-button-back" type="button" aria-label="Назад"></button>
+                <button class="slider-button slider-button-next" type="button" aria-label="Вперед"></button>
+              </div>
             </div>
           </div>
         </section>
