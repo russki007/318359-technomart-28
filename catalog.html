@@ -226,26 +226,22 @@
           <section class="sort">
             <h2>Сортитовка:</h2>
             <div class="sort-controls">
-              <input id="price" name="sort" type="radio" value="P" checked class="sort-input-radio visually-hidden">
-              <label for="price">По Цене</label>
-              <input id="type" name="sort" type="radio" value="T" class="sort-input-radio visually-hidden">
-              <label for="type">По Типу</label>
-              <input id="func" name="sort" type="radio" value="F" class="sort-input-radio visually-hidden">
-              <label for="func" >По Функционалу</label>
-
-              <input id="asc" name="order" type="radio" checked class="order-input-radio visually-hidden">
-              <label for="asc">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 0L0 10h11z"/>
-                </svg>
-              </label>
-              <input id="desc" name="order" type="radio" class="order-input-radio visually-hidden">
-              <label for="desc">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 10L0 0h11"/>
-                </svg>
-              </label>
-            </div>
+              <a class="selected" href="#">По Цене</a>
+              <a href="#">По Типу</a>
+              <a href="#">По Функционалу</a>
+              <div>
+                <a href="#" class="asc selected">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                  </svg>
+                </a>
+                <a href="#" class="desc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                  </svg>
+                </a>
+              </div>
+           </div>
           </section>
           <!-- PAGER -->
           <section class="pager">

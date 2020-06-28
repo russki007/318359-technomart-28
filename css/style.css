@@ -928,7 +928,6 @@ body {
   grid-area: s;
   /*grid-column: 2 / -1;*/
 
-  border: none;
   margin: 0;
   padding: 0;
 
@@ -942,11 +941,9 @@ body {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-  width: 220px;
-  margin-left: 20px;
+  width: 240px;
+  padding-left: 20px;
   margin-top: 10px;
-  /*outline: dashed 1px red;*/
-  /*outline-offset: -1px;*/
 }
 
 .sort .sort-controls {
@@ -954,39 +951,60 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-right: 14px;
-
-  outline: dashed 1px blue;
-  outline-offset: -1px;
+  flex-grow: 1;
 }
 
-.sort-controls label {
+.sort-controls > a {
+  display: inline-block;
+  color: var(--color-black);
   cursor: pointer;
+  border-bottom: dotted 1px var(--color-red4);
+  opacity: 0.3;
+  font-size: 13px;
+  line-height: 18px;
 }
 
-.sort-input-radio + label {
-  margin-left: 10px;
-  margin-right: 10px;
+.sort-controls > a.selected {
+  color: var(--color-red);
+  border: none;
+  opacity: 1;
 }
 
-.sort-input-radio:checked + label {
-  color: var(--color-red4);
+.sort-controls > a:hover {
+  opacity: 1;
 }
 
-.sort-input-radio:not(:checked) + label {
-  border-bottom: dashed 1px var(--color-red4);
+.sort-controls div {
+  width: 43px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.order-input-radio + label {
-  padding-left: 14px;
+.sort-controls .desc,
+.sort-controls .asc {
+  opacity: 0.3;
 }
 
-.order-input-radio:checked + label path {
+.sort-controls .desc.selected path,
+.sort-controls .asc.selected path {
   fill: var(--color-red4);
 }
 
-.order-input-radio:not(:checked) + label path {
-  fill: var(--color-greylight);
+.sort-controls .asc.selected,
+.sort-controls .desc.selected {
+  opacity: 1;
 }
+
+.sort-controls .asc:hover path,
+.sort-controls .desc:hover path {
+  fill: var(--color-black);
+}
+
+.sort-controls .desc:hover {
+  opacity: 1;
+}
+
+
 
 
 /* FILTER */
