@@ -1280,6 +1280,7 @@ body {
 
 .buy-btn {
   padding-left: 50px;
+  margin-top: 38px;
 }
 
 .buy-btn::before {
