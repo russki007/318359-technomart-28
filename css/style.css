@@ -1030,11 +1030,11 @@ body {
   margin: 0 0 5px;
 }
 
-.makers-list input:checked + label:before {
+.makers-list input:checked + label::before {
   display: block;
 }
 
-.makers-list input:not(:checked) + label:after {
+.makers-list input:not(:checked) + label::after {
   display: block;
 }
 
@@ -1161,6 +1161,10 @@ body {
   height: 38px;
   background: var(--color-white);
   border: 1px solid var(--color-grey2);
+}
+
+.filter input:disabled + label {
+  opacity: 0.4;
 }
 
 /* CATALOG */
@@ -2138,10 +2142,3 @@ a {
 .model-msg .button-red {
   width: 460px;
 }
-/*.model-msg * {*/
-/*  outline: dashed 2px red;*/
-/*  outline-offset: -2px;*/
-/*}*/
-
-
-
