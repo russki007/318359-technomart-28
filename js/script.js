@@ -8,14 +8,17 @@
   let msgPopup = window.document.querySelector(".model-msg");
   wireUp(msgLink, msgPopup);
 
-  let buyLink = window.document.querySelector(".buy-btn");
+
+  let buttons = window.document.querySelectorAll(".buy-btn");
   let msgConfirm = window.document.querySelector(".model-confirm-msg");
-  wireUp(buyLink, msgConfirm);
+  buttons.forEach(button =>{
+    wireUp(button, msgConfirm)
+  });
 
   function wireUp(link, target) {
 
     if (link) {
-      link.addEventListener('click', evt => {
+      link.addEventListener("click", evt => {
         evt.preventDefault();
         target.classList.toggle("hidden");
       })

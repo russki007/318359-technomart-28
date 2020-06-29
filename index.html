@@ -165,9 +165,29 @@
 
           <ul class="catalog-list">
             <li class="catalog-item">
-              <a class="tile" href="blank.html">
+              <a class="tile" href="#">
                 <div class="placeholder">
                   <img src="img/product001.png" width="144" height="128" alt="BOSCH BFG 9000">
+                  <div class="controls-group hidden">
+                    <button class="button-green buy-btn">КУПИТЬ</button>
+                    <button class="button-green bookmark-btn">В закладки</button>
+                  </div>
+                </div>
+                <div class="title">Перфоратор BOSCH BFG 9000</div>
+                <div class="price">32500 Р.</div>
+                <div class="price-current-group">
+                  <span>25500 Р.</span>
+                </div>
+              </a>
+            </li>
+            <li class="catalog-item new-tag">
+              <a class="tile" href="#">
+                <div class="placeholder">
+                  <img src="img/product001.png" width="144" height="128" alt="BOSCH BFG 9000">
+                  <div class="controls-group hidden">
+                    <button class="button-green buy-btn">КУПИТЬ</button>
+                    <button class="button-green bookmark-btn">В закладки</button>
+                  </div>
                 </div>
                 <div class="title">Перфоратор BOSCH BFG 9000</div>
                 <div class="price">32500 Р.</div>
@@ -177,9 +197,13 @@
               </a>
             </li>
             <li class="catalog-item">
-              <a class="tile" href="blank.html">
+              <a class="tile" href="#">
                 <div class="placeholder">
                   <img src="img/product001.png" width="144" height="128" alt="BOSCH BFG 9000">
+                  <div class="controls-group hidden">
+                    <button class="button-green buy-btn">КУПИТЬ</button>
+                    <button class="button-green bookmark-btn">В закладки</button>
+                  </div>
                 </div>
                 <div class="title">Перфоратор BOSCH BFG 9000</div>
                 <div class="price">32500 Р.</div>
@@ -188,22 +212,14 @@
                 </div>
               </a>
             </li>
-            <li class="catalog-item">
-              <a class="tile" href="blank.html">
+            <li class="catalog-item new-tag">
+              <a class="tile" href="#">
                 <div class="placeholder">
                   <img src="img/product001.png" width="144" height="128" alt="BOSCH BFG 9000">
-                </div>
-                <div class="title">Перфоратор BOSCH BFG 9000</div>
-                <div class="price">32500 Р.</div>
-                <div class="price-current-group">
-                  <span>25500 Р.</span>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-item">
-              <a class="tile" href="blank.html">
-                <div class="placeholder">
-                  <img src="img/product001.png" width="144" height="128" alt="BOSCH BFG 9000">
+                  <div class="controls-group hidden">
+                    <button class="button-green buy-btn">КУПИТЬ</button>
+                    <button class="button-green bookmark-btn">В закладки</button>
+                  </div>
                 </div>
                 <div class="title">Перфоратор BOSCH BFG 9000</div>
                 <div class="price">32500 Р.</div>
@@ -450,6 +466,22 @@
           <button class="button-red" class="button" type="submit">Оформить Заказ</button>
         </div>
       </form>
+    </div>
+
+    <!-- CONFIRMATION POPUP -->
+    <div class="model model-confirm-msg hidden">
+      <h2 class="visually-hidden">Подтверждение</h2>
+      <button type="button" aria-label="Закрыть" class="model-close">
+      </button>
+      <div>
+        <div class="content-placeholder success">
+          <span >Товар добавлен в корзину</span>
+        </div>
+        <div class="buttons-panel">
+          <button class="button-red" type="button">Оформить Заказ</button>
+          <button class="button-red close-button" type="button">Продолжить Покупки</button>
+        </div>
+      </div>
     </div>
 
     <script src="js/script.js"></script>

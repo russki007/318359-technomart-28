@@ -1214,6 +1214,19 @@ body {
   align-items: center;
 }
 
+/*.catalog-item .controls-group,*/
+a.tile:hover img {
+  display: none;
+}
+
+a.tile:hover .controls-group {
+  display: block;
+}
+
+a.tile:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 .catalog-item .placeholder {
   flex-grow: 1;
   margin-bottom: 10px;
@@ -1291,14 +1304,18 @@ body {
   margin-bottom: 10px;
   box-shadow: inset 0px -3px 0px #367315;
   background: #63A63E;
-  padding-top: 10px;
+
   color: var(--color-white);
   position: relative;
+  outline: none;
+  border-style: none;
+
+  /*padding-top: 10px;*/
 }
 
 .buy-btn {
-  padding-left: 50px;
   margin-top: 38px;
+  padding-left: 15px;
 }
 
 .buy-btn::before {
@@ -1948,6 +1965,7 @@ a {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  z-index: 1;
 }
 
 .model-close::before,
