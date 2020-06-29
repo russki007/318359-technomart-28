@@ -11,6 +11,7 @@
   --color-greylight2: #EAEAEA; /* Catalog item border*/
   --color-grey2: #E5E5E5; /* Filter button border; Pager buttons; */
   --color-grey3: #A9A9A9; /* Catalog item unit price color */
+  --color-grey4: #F2F6F8;
   --color-greydark: #293449;
   --color-greydark2: #32425C;
   --color-background: #F1F5F7;
@@ -651,7 +652,7 @@ body {
   margin: 0;
 }
 
-.slider-banner > h2 {
+.slider-banner .title {
   font-family: var(--font-cuprum);
   font-weight: bold;
   font-size: 36px;
@@ -854,12 +855,12 @@ body {
 }
 
 .grey {
-  background-color: #F2F6F8; /* TODO: Move to vars */
+  background-color: var(--color-grey4);
 }
 
 .big-heading {
   text-transform: uppercase;
-  color: #32425C;  /* TODO: replace with var */
+  color: var(--color-greydark2);
   font-size: 30px;
   line-height: 30px;
   margin: 0;
