@@ -1726,7 +1726,7 @@ a {
 }
 
 .range-controls .bar {
-  width: 30%;
+  width: 80%;
   height: 2px;
   background: #00ca74;
 }
@@ -1748,6 +1748,18 @@ a {
   top: 31px;
   left: 0px;
   cursor: pointer;
+}
+
+.range-controls .toggle::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: #ABABAB;
+  position: absolute;
+  top: -2px;
+  left: -2px;
 }
 
 .range-controls .toggle-min {
