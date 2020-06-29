@@ -419,19 +419,6 @@ body {
   color: var(--color-black);
 }
 
-.logout-link:hover + div {
-  color: var(--color-red);
-}
-
-.logout-link:hover + div::after {
-  background: var(--color-red);
-}
-
-.logout-link:active + div::after {
-  background: #C5C5C5;
-}
-
-.logout-link:active + div,
 .logout-link:active {
   color: #C5C5C5;
 }
@@ -462,7 +449,6 @@ body {
   opacity: 0.3;
 }
 
-
 .account-group {
   width: 100%;
   display: flex;
@@ -470,12 +456,13 @@ body {
   align-items: center;
 }
 
-.account-group div {
+/* ACCOUNT SUB-NAV */
+
+.subnav-group {
   height: 24px;
   font-family: var(--font-cuprum);
   font-size: 16px;
   line-height: 18px;
-  color: #32425C;
   padding-top: 7px;
   display: flex;
   align-items: center;
@@ -483,7 +470,11 @@ body {
   justify-content: space-between;
 }
 
-.account-group div::after {
+.subnav-group a {
+  color: var(--color-greydark2);
+}
+
+.subnav-group::after {
   content: "";
   display: inline-block;
   width: 5px;
@@ -492,19 +483,29 @@ body {
   border-radius: 50%;
 }
 
-.account-group div span:last-of-type {
+.subnav-group a:last-of-type {
   order: 2;
 }
 
-/* TODO: Verify with Alex
-   1. Used grid layout with 3 dynamic columns and gap 20. The width is forced by the
-   container of width: 940=300+300+300+20+20
+.subnav-group:hover::after {
+  background: var(--color-red);
+}
 
-   2. Used absolute positioning for icons with fixed, custom botton/top values. Is there are
-   better solution.
+.subnav-group:hover a,
+.subnav-group a:hover {
+  color: var(--color-red);
+}
 
-   3. By the buttons fall out? Can this be used for log in the headeer (margin)
-*/
+.subnav-group:active::after {
+  background: var(--color-greylight);
+}
+
+.subnav-group:active a,
+.subnav-group a:active {
+  color: var(--color-greylight);
+}
+
+/* PROMO BLOCK */
 
 .promo-container {
   margin: 0;
