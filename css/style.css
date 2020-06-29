@@ -420,7 +420,7 @@ body {
 }
 
 .logout-link:active {
-  color: #C5C5C5;
+  color: var(--color-greylight);
 }
 
 .logout-link::after {
@@ -436,7 +436,7 @@ body {
   opacity: 0.3;
 }
 
-.logout-link::before {
+.profile-link::before {
   content: "";
   position: absolute;
   top: 13px;
@@ -446,6 +446,16 @@ body {
   background-image: url("../img/icon-user.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
+}
+
+.logout-link:hover::after,
+.profile-link:hover::before {
+  opacity: 1;
+}
+
+.logout-link:active::after,
+.profile-link:active::before {
   opacity: 0.3;
 }
 
