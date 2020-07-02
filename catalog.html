@@ -132,31 +132,30 @@
         <div class="catalog-grid">
           <!-- FILTER -->
           <section class="filter">
-            <h2>Фильтор:</h2>
+            <h2>Фильтр:</h2>
             <form method="get" action="https://echo.htmlacademy.ru">
-              <div>
-                <!-- RANGE SLIDER -->
-                <fieldset class="filter-item">
-                  <legend>Price</legend>
-                  <div class="range-slider">
-                    <div class="range-controls">
-                      <div class="scale">
-                        <div class="bar"></div>
-                      </div>
-                      <div class="toggle toggle-min" tabindex="0"></div>
-                      <div class="toggle toggle-max" tabindex="0"></div>
-                    </div>
 
-                    <div class="price-controls">
-                        <input type="number" name="min-price"
-                                    value="0">
-                       <div class="dash"></div>
-                       <input type="number" name="max-price"
-                                  value="100">
+              <!-- RANGE SLIDER -->
+              <fieldset>
+                <legend>ЦЕНА:</legend>
+                <div class="range-slider">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
                     </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
-                </fieldset>
-              </div>
+
+                  <div class="price-controls">
+                      <input type="number" name="min-price"
+                                  value="0">
+                     <div class="dash"></div>
+                     <input type="number" name="max-price"
+                                value="30000">
+                  </div>
+                </div>
+              </fieldset>
               <fieldset>
                 <legend>Производители:</legend>
                 <ul class="makers-list">
@@ -197,7 +196,7 @@
               </fieldset>
               <fieldset>
                 <legend>Питание:</legend>
-                <ul class="power-filter">
+                <ul class="power-list">
                   <li>
                     <input
                       class="visually-hidden"
