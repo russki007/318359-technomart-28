@@ -952,6 +952,10 @@ body {
   padding-top: 2px;
 }
 
+.big-heading.black {
+  color: var(--color-black);
+}
+
 .courier-list {
   list-style: none;
   padding: 0px;
@@ -1612,6 +1616,7 @@ a.tile:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-start;
   min-height: 193px;
 }
 
@@ -1643,7 +1648,7 @@ a.tile:hover {
 
 .footer-upane > ul:last-child {
   padding-left: 23px;
-  margin-top: 27px;
+  padding-top: 33px;
 }
 
 .footer a:hover {
@@ -1658,6 +1663,7 @@ a.tile:hover {
 .footer a.yellow-link,
 .footer a.yellow-link:hover {
   color: var(--color-ylellow);
+  display: block;
 }
 
 .footer-nav-item a.yellow-link:active {
@@ -1669,7 +1675,7 @@ a.tile:hover {
   color: var(--color-white);
 }
 
-footer .small-text-white {
+.footer .small-text-white {
   font-size: 16px;
   line-height: 24px;
   color: var(--color-white);
@@ -1683,31 +1689,42 @@ footer .small-text-white {
 
 .footer-bpane .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .footer-bpane .right-column {
   display: flex;
+  font-family: var(--font-cuprum);
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: auto;
 }
 
-.right-column p:last-child {
+.right-column div:last-child {
   margin-right: 13px;
   margin-left: 51px;
 }
 
 .copyright {
+  width: 227px;
+}
+
+.copyright p {
+  margin: 0;
+  padding: 0;
+
   font-family: var(--font-cuprum);
   font-size: 16px;
   line-height: 18px;
   color: var(--color-white);
-  width: 227px;
 }
 
 .contacts-list {
   list-style: none;
   padding: 0;
   color: var(--color-white);
+  margin-left: 163px;
+  margin-top: 14px;
 
   width: 132px;
   display: flex;
