@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 :root {
   --color-black: #000;
   --color-red: #EE3643;
@@ -46,6 +53,7 @@ html {
 
 body {
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 
@@ -195,6 +203,14 @@ body {
   border: none;
   outline: none;
   color: var(--color-black);
+}
+
+.search-input::-webkit-input-placeholder {
+  color: var(--color-white);
+}
+
+.search-input::-moz-placeholder {
+  color: var(--color-white);
 }
 
 .search-input::placeholder {
@@ -983,6 +999,7 @@ body {
 
 .main .container {
   display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content 1fr;
   grid-template-rows: min-content min-content 1fr;
 }
 
@@ -1105,7 +1122,7 @@ body {
 }
 
 .filter fieldset:last-of-type::after {
- display: none;
+  display: none;
 }
 
 .filter h2 {
@@ -1215,6 +1232,8 @@ body {
   text-transform: uppercase;
   display: block;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   position: relative;
 
@@ -1257,17 +1276,20 @@ body {
   padding: 0;
   margin: 0;
   display: grid;
+  -moz-column-gap: 20px;
   column-gap: 20px;
   row-gap: 18px;
 }
 
 .catalog-list.x3-x3 {
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
 }
 
 .catalog-list.x1-x4 {
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, -webkit-min-content);
   grid-template-rows: repeat(1, min-content);
 }
 
@@ -1314,6 +1336,7 @@ a.tile:hover {
 }
 
 .placeholder img {
+  -o-object-fit: contain;
   object-fit: contain;
   margin: 0 0 0 32px;
 }
@@ -1333,6 +1356,7 @@ a.tile:hover {
   color: var(--color-grey3);
   font-size: 17px;
   line-height: 18px;
+  -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
   text-transform: uppercase;
   font-weight: 700;
@@ -1521,6 +1545,7 @@ a.tile:hover {
 }
 
 .brand-item img {
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -1551,6 +1576,7 @@ a.tile:hover {
 
 .col-x2 {
   display: grid;
+  grid-template-columns: 1fr -webkit-min-content;
   grid-template-columns: 1fr min-content;
   margin-bottom: 69px;
   margin-top: 70px;
@@ -2199,6 +2225,20 @@ a {
   border: 2px solid var(--color-greylight);
   padding: 7px 7px 7px 12px;
   font: inherit;
+}
+
+.msg-form textarea::-webkit-input-placeholder, .msg-form input::-webkit-input-placeholder {
+  color: #A9A9A9;
+  font: var(--font-ptsans);
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.msg-form textarea::-moz-placeholder, .msg-form input::-moz-placeholder {
+  color: #A9A9A9;
+  font: var(--font-ptsans);
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .msg-form textarea::placeholder,
