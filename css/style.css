@@ -1861,6 +1861,12 @@ a {
   align-items: center;
 }
 
+.price-controls label {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
 .range-controls .bar {
   width: 80%;
   height: 2px;
