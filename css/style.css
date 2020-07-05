@@ -599,7 +599,7 @@ body {
   padding: 0;
   min-height: 409px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 123px 123px 123px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   margin: 59px 0 0;
@@ -773,7 +773,7 @@ body {
 .slider-item .button-red {
   position: absolute;
   left: 24px;
-  bottom: 30px;
+  bottom: 26px;
   width: 192px;
 }
 
@@ -936,16 +936,16 @@ body {
   margin-bottom: 20px;
 }
 
-.banner.catalog {
-  margin-top: 55px;
+.banner.banner-catalog {
+  margin-top: 60px;
 }
 
-.banner.catalog .button-red {
+.banner.banner-catalog .button-red {
   padding-left: 25px;
   padding-right: 24px;
 }
 
-.banner.brands {
+.banner.banner-brands {
   margin-top: 70px;
 }
 
@@ -960,8 +960,8 @@ body {
   line-height: 30px;
   font-weight: 400;
   margin: 0;
-  padding-left: 2px;
-  padding-top: 2px;
+  /*padding-left: 2px;*/
+  /*padding-top: 2px;*/
 }
 
 .big-heading.black {
@@ -1558,7 +1558,7 @@ a.tile:hover {
 
 .section-grey.catalog-page {
   margin-top: 0px;
-  padding-bottom: 41px;
+  padding-bottom: 43px;
 }
 
 .section-grey h2 {
