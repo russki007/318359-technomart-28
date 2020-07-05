@@ -397,7 +397,8 @@ body {
   background-position: 0 0;
 }
 
-.phone-box span {
+.phone-box > a {
+  display: block;
   font-size: 21px;
   font-weight: bold;
   line-height: 30px;
