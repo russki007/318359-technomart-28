@@ -1078,8 +1078,9 @@ body {
   opacity: 1;
 }
 
-.sort-controls > a:hover {
+.sort-controls > a:hover:not(.selected) {
   opacity: 1;
+  border-bottom: solid 1px var(--color-red);
 }
 
 .sort-controls div {
@@ -1094,8 +1095,8 @@ body {
   opacity: 0.3;
 }
 
-.sort-controls .desc.selected path,
-.sort-controls .asc.selected path {
+.desc.selected path,
+.asc.selected path {
   fill: var(--color-red4);
 }
 
@@ -1104,8 +1105,8 @@ body {
   opacity: 1;
 }
 
-.sort-controls .asc:hover path,
-.sort-controls .desc:hover path {
+.asc:hover path,
+.desc:hover path {
   fill: var(--color-black);
 }
 
@@ -1650,7 +1651,7 @@ body {
   font-family: var(--font-cuprum);
 }
 
-.footer-upane {
+.footer-upper-pane {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1671,7 +1672,7 @@ body {
   line-height: 24px;
 }
 
-.footer-upane span {
+.footer-upper-pane span {
   font-size: 18px;
   line-height: 24px;
   color: var(--color-white);
@@ -1684,7 +1685,7 @@ body {
   align-items: flex-end;
 }
 
-.footer-upane > ul:last-child {
+.footer-upper-pane > ul:last-child {
   padding-left: 23px;
   padding-top: 33px;
 }
@@ -1709,7 +1710,9 @@ body {
   opacity: 0.5;
 }
 
-.footer a, .footer a:hover, .footer a:focus {
+.footer a,
+.footer a:hover,
+.footer a:focus {
   color: var(--color-white);
 }
 
@@ -2017,10 +2020,6 @@ a {
   background-color: var(--color-white);
   color: #32425C;
   border-top: 1px var(--color-white) solid;
-}
-
-.side-menu__navbar :not(.current):hover {
-  background-color: #293449;
 }
 
 .side-menu .content-panel {
