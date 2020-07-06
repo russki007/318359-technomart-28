@@ -2058,7 +2058,7 @@ a {
 
 }
 
-#warranty::after {
+.warranty::after {
   content: "";
   right: 0px;
   top: 0;
@@ -2071,7 +2071,7 @@ a {
   z-index: -1;
 }
 
-#finance::after {
+.finance::after {
   content: "";
   right: 0;
   top: 40px;
@@ -2083,7 +2083,7 @@ a {
   background-repeat: no-repeat;
 }
 
-#finance .button-red {
+.finance .button-red {
   width: 212px;
 }
 
