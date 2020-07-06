@@ -346,43 +346,51 @@ body {
   padding-right: 42px;
 }
 
+/*.header-pane * {*/
+/*  outline: dashed 1px blue;*/
+/*  outline-offset: -1px;*/
+/*}*/
+
 .header-pane {
   font-family: var(--font-cuprum);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 41px;
-  margin-bottom: 33px;
-  padding-top: 5px;
+  margin-top: 0px;
+  margin-bottom: 75px;
+  padding-top: 0px;
   height: 84px;
 }
 
-.header-text {
+.header-pane p {
+  display: block;
+  width: 227px;
   font-size: 16px;
   font-style: italic;
-  line-height: 23px;
+  line-height: 24px;
   color: var(--color-red);
-  margin-top: 0;
-  padding-left: 30px;
   font-family: var(--font-cuprum);
+  padding-left: 30px;
+  padding-top: 27px;
 }
 
 .header-pane .contact-group {
-  margin-left: 98px;
+  margin-left: 93px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 46px;
 }
 
 .phone-box {
   border: solid 2px var(--color-white);
-  min-width: 270px;
-  min-height: 45px;
+  width: 270px;
+  height: 45px;
   text-align: center;
   position: relative;
-  margin-left: 11px;
   padding-left: 28px;
-  padding-top: 6px;
+  padding-top: 5px;
 }
 
 .phone-box::before {
@@ -406,18 +414,19 @@ body {
   text-align: center;
 }
 
-.header-text-small {
-  font-family: Cuprum;
+.contact-group span {
+  font-family: var(--font-cuprum);
   font-size: 14px;
   line-height: 24px;
   color: var(--color-greydark2);
   text-align: center;
-  margin-top: 2px;
-  padding-left: 13px;
+  padding-left: 9px;
+  padding-top: 2px;
 }
 
 .account-nav {
   margin-left: auto;
+  padding-top: 46px;
 }
 
 .account-nav-list {
