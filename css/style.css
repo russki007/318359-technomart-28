@@ -968,7 +968,8 @@ body {
 }
 
 .banner.banner-brands .button-red {
-
+  margin-top: -5px;
+  margin-right: 5px;
 }
 
 .grey {
@@ -1337,15 +1338,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
   cursor: pointer;
+  justify-content: flex-end;
 }
 
 .catalog-item .controls-group {
   position: absolute;
   left: 40px;
-  top: -21px;
+  bottom: 45px;
 }
 
 .tile:hover img {
@@ -1362,26 +1362,27 @@ body {
 
 .catalog-item .placeholder {
   width: 100%;
-  height: 130px;
-  margin-bottom: 11px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .placeholder img {
   -o-object-fit: contain;
   object-fit: contain;
-  margin: 0 0 0 32px;
 }
 
 .catalog-item .title {
-  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   text-align: center;
   width: 184px;
   color: var(--color-black);
-  padding-top: 17px;
-  padding-bottom: 6px;
+  font-weight: bold;
+  font-family: var(--font-ptsans);
+  margin-bottom: 38px;
 }
 
 .catalog-item .price {
@@ -1391,14 +1392,16 @@ body {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
   text-transform: uppercase;
-  font-weight: 700;
   text-align: center;
+  position: absolute;
+  font-weight: bold;
+  bottom: 73px;
 }
 
 .catalog-item .price-current {
+  margin-bottom:21px;
   height: 38px;
   width: 100%;
-  margin-top: auto;
 }
 
 .price-current span {
@@ -1441,8 +1444,7 @@ body {
 }
 
 .buy-btn {
-  margin-top: 38px;
-  padding-left: 15px;
+  padding-left: 19px;
 }
 
 .buy-btn::before {
@@ -1631,7 +1633,7 @@ body {
 
 .col-2 .button-red {
   width: 300px;
-  margin-top: 25px;
+  margin-top: 23px;
 }
 
 .col-x2 p {
@@ -1681,6 +1683,8 @@ body {
   color: var(--color-white);
   display: block;
   margin-top: 27px;
+  padding-left: 2px;
+  padding-top: 3px;
 }
 
 .footer-nav-list.upper-menu {
