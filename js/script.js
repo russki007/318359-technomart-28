@@ -16,7 +16,6 @@
   });
 
   function wireUp(link, target) {
-
     if (link) {
       link.addEventListener("click", evt => {
         evt.preventDefault();
@@ -27,7 +26,7 @@
       if (target == null) debugger;
       const closeLink = target.querySelector(".model-close");
       if (closeLink == null) debugger;
-      closeLink.addEventListener('click', evt => {
+      closeLink.addEventListener("click", evt => {
         target.classList.add("hidden");
       })
     }
