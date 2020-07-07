@@ -1000,7 +1000,7 @@ body {
 
 .courier-list {
   list-style: none;
-  padding: 0px;
+  padding: 0;
   margin: 0;
 }
 
@@ -1008,17 +1008,29 @@ body {
   font-family: var(--font-cuprum);
   font-size: 18px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
-  margin-top: 9px;
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 37px;
+  padding-top: 2px;
+}
+
+.courier-list li:last-child {
+  margin-bottom: 0px;
+  padding-top: 3px;
 }
 
 .courier-list li::before {
+  position: absolute;
   content: "";
   width: 25px;
   height: 2px;
-  background-color: red;
-  margin-right: 12px;
+  background-color: var(--color-red);
+  top: 15px;
+  left: 0;
+}
+
+.courier-list li:last-child::before {
+  top: 12px
 }
 
 .catalog-grid {
@@ -1123,6 +1135,7 @@ body {
   width: 220px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .filter fieldset {
@@ -1139,7 +1152,8 @@ body {
   text-transform: uppercase;
   width: 100%;
   margin-bottom: 14px;
-  padding-top: 2px;
+  margin-bottom: 14px;
+  padding-top: 5px;
 }
 
 .filter fieldset::after {
@@ -1367,11 +1381,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  padding-left: 0px;
+  padding-right: 8px;
+  padding-bottom: 10px;
 }
 
 .placeholder img {
   -o-object-fit: contain;
   object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
 
 .catalog-item .title {
@@ -1561,10 +1580,8 @@ body {
 }
 
 .brand-item a {
-  display: block;
   height: 100%;
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1624,10 +1641,7 @@ body {
 }
 
 .col-1 .button-red {
-  margin-top: auto;
-}
-
-.col-1 .button-red {
+  margin-top: 20px;
   width: 220px;
 }
 
@@ -1728,6 +1742,7 @@ body {
 }
 
 .footer .small-text-white {
+  display: block;
   font-size: 16px;
   line-height: 24px;
   color: var(--color-white);
@@ -1750,6 +1765,12 @@ body {
   font-size: 16px;
   line-height: 18px;
   margin-left: auto;
+  height: 100%;
+  padding-top: 32px;
+}
+
+.right-column .yellow-link {
+  margin-top: -2px;
 }
 
 .right-column div:last-child {
@@ -1879,6 +1900,7 @@ a {
 /* RANGE SLIDER */
 .range-slider {
   width: 220px;
+  margin-top: -3px;
 }
 
 .range-controls {
@@ -2316,4 +2338,16 @@ a {
 
 .model-msg .button-red {
   width: 460px;
+}
+
+legend.makers-legend {
+  padding-top: 8px;
+}
+
+.filter fieldset:nth-child(2) {
+  margin-bottom: 0;
+}
+
+legend.power-legend {
+  padding-top: 19px;
 }
