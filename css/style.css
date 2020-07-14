@@ -889,6 +889,10 @@ body {
   padding-top: 5px;
 }
 
+.breadcrumbs-item:last-child {
+  padding-left: 2px;
+}
+
 .breadcrumbs-item.current::after {
   display: none;
 }
@@ -1491,12 +1495,10 @@ body {
   opacity: 0.5;
 }
 
-
 /* PAGER */
 .pager {
-  margin-top: 45px;
+  margin-top: 47px;
 }
-
 
 .pagination-list {
   list-style: none;
