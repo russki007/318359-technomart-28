@@ -579,7 +579,6 @@ body {
   background: var(--color-red);
 }
 
-.subnav-group:hover a,
 .subnav-group a:hover {
   color: var(--color-red);
 }
@@ -588,7 +587,6 @@ body {
   background: var(--color-greylight);
 }
 
-.subnav-group:active a,
 .subnav-group a:active {
   color: var(--color-greylight);
 }
