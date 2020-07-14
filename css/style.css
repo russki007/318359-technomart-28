@@ -779,9 +779,9 @@ body {
   position: absolute;
   bottom: 36px;
   z-index: 20;
-
+  left: 255px;
   display: flex;
-  width: 100%;
+  width: 100px;
   justify-content: center;
 }
 
