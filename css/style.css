@@ -1161,8 +1161,12 @@ body {
   width: 100%;
   background: var(--color-greylight);
   position: absolute;
-  bottom: -16px;
+  bottom: -11px;
   left: 0;
+}
+
+.filter fieldset:first-of-type::after {
+  bottom: -27px;
 }
 
 .filter fieldset:last-of-type::after {
@@ -1231,8 +1235,8 @@ body {
 .power-list label::after {
   content: "";
   position: absolute;
-  left: 0px;
-  top: 0;
+  left: 0;
+  top: 2px;
   width: 25px;
   height: 25px;
 
@@ -1245,8 +1249,8 @@ body {
 .power-list label::before {
   content: "";
   position: absolute;
-  left: 0px;
-  top: 0;
+  left: 0;
+  top: 2px;
   width: 25px;
   height: 25px;
 
@@ -1259,8 +1263,12 @@ body {
 .filter .makers-list {
 }
 
-.power-list {
+.power-list label[for=idBattery] {
+  padding-top: 7px;
+}
 
+.power-list label[for=idMain] {
+  padding-top: 2px;
 }
 
 .filter ul {
@@ -1300,6 +1308,7 @@ body {
   height: 38px;
   background: var(--color-white);
   border: 1px solid var(--color-grey2);
+  margin-top: -17px;
 }
 
 .filter input:disabled + label {
