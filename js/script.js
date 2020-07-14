@@ -23,9 +23,7 @@
       })
     }
     if (target) {
-      if (target == null) debugger;
       const closeLink = target.querySelector(".model-close");
-      if (closeLink == null) debugger;
       closeLink.addEventListener("click", evt => {
         target.classList.add("hidden");
       })
