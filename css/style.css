@@ -58,7 +58,6 @@ body {
 }
 
 .logo {
-  display: block;
   background: var(--color-red);
   position: relative;
   height: 42px;
